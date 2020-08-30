@@ -15,13 +15,13 @@ class TestCalendar //시연을 위해 날짜가 바뀌고 바꼈을 때 기능들을 보여주기 위한 
 		Sales_Control sc = new Sales_Control(); //판매량 인스턴스 생성
 
 		//날짜 테스트
-		int year = cal.get(Calendar.YEAR);
-		int month = cal.get(Calendar.MONTH) + 1;
-		int date = cal.get(Calendar.DATE);
+		//int year = cal.get(Calendar.YEAR);
+		//int month = cal.get(Calendar.MONTH) + 1;
+		//int date = cal.get(Calendar.DATE);
 
 		sumCustomer += 1; //손님 수는 한명씩 늘어남  
 
-		if((sumCustomer)%2 == 0 && (sumCustomer) != 0) //손님이 2명 오면 날짜가 바뀜 0명일 땐 적용안됨
+		if((sumCustomer)%3 == 0 && (sumCustomer) != 0) //손님이 3명 오면 날짜가 바뀜 0명일 땐 적용안됨
 		{
 			datePlus= datePlus+1; 
 			rec.setCustomer(0); //하루 손님 수 초기화 
@@ -43,30 +43,30 @@ class TestCalendar //시연을 위해 날짜가 바뀌고 바꼈을 때 기능들을 보여주기 위한 
 	//날짜가 바뀌면 모든 메뉴 판매량 초기화
 	void resetSales()
 	{
-		Sales sa = new Sales(); //판매량 클래스 인스턴스 생성
+		  // Sales 판매량 클래스 
 
 		  // ① 커피류
-		   sa.setSespresso(0);
-		   sa.setSamericano(0);   
-		   sa.setSlatte(0);
-		   sa.setScafeMoca(0);
-		   sa.setScappuccino(0);
-		   sa.setSvanillaLatte(0);
-		   sa.setScaramelM(0);
+		   Sales.setSespresso(0);
+		   Sales.setSamericano(0);   
+		   Sales.setSlatte(0);
+		   Sales.setScafeMoca(0);
+		   Sales.setScappuccino(0);
+		   Sales.setSvanillaLatte(0);
+		   Sales.setScaramelM(0);
 		   
 		   // ② 논커피류
-		   sa.setSjamongAde(0);
-		   sa.setSyogurt(0);
-		   sa.setStea(0);
-		   sa.setSorangeJuice(0);
-		   sa.setSgogumaLatte(0);
+		   Sales.setSjamongAde(0);
+		   Sales.setSyogurt(0);
+		   Sales.setStea(0);
+		   Sales.setSorangeJuice(0);
+		   Sales.setSgogumaLatte(0);
 		   
 		   // ③ 디저트류 
-		   sa.setScake(0);
-		   sa.setSbagel(0);
-		   sa.setSscone(0);
-		   sa.setSmacaron(0);
-		   sa.setScookie(0);
+		   Sales.setScake(0);
+		   Sales.setSbagel(0);
+		   Sales.setSscone(0);
+		   Sales.setSmacaron(0);
+		   Sales.setScookie(0);
 
 
 

@@ -77,7 +77,7 @@ class Balju_Control
 		cha = (inventory.getBeanL()-inventory.getBean());	// 원두 자동 발주했을 때 진짜 채워지는 수량	
 		all = inventory.getBean()+cha;						// 현재 원두 수량 = 원래 있던 원두 수량 + 진짜 채워지는 수량 
 		Nbean += all;										// 현재 원두 수량을 누적해서 변수 Nbean 에 담는다
-		inventory.setNbean(Nbean);							// 누적 변수에 누적 수량을 넣는다
+		Inventory.setNbean(Nbean);							// 누적 변수에 누적 수량을 넣는다
 		//test -- 확인
 		//System.out.println(cha); 
 
@@ -85,115 +85,115 @@ class Balju_Control
 		cha = (inventory.getMilkL()-inventory.getMilk());	 
 		all	=  inventory.getMilk() + cha;
 		Nmilk += all;				
-		inventory.setNmilk(Nmilk);
+		Inventory.setNmilk(Nmilk);
 		
 		// 초코시럽 자동 발주
 		cha = (inventory.getChocoL()-inventory.getChoco());	
 		all = inventory.getChoco()+cha;
 		Nchoco += all;
-		inventory.setNchoco(Nchoco);
+		Inventory.setNchoco(Nchoco);
 
 		// 바닐라시럽 자동 발주
 		cha = (inventory.getVanillaL()-inventory.getVanilla());	
 		all = inventory.getVanilla()+cha;
 		Nvanilla += all;
-		inventory.setNvanilla(Nvanilla);
+		Inventory.setNvanilla(Nvanilla);
 		
 		// 헤이즐넛시럽 자동 발주
 		cha = (inventory.getHazelL()-inventory.getHazel());	
 		all = inventory.getHazel()+cha;
 		Nhazel += all;
-		inventory.setNhazel(Nhazel);
+		Inventory.setNhazel(Nhazel);
 
 		// 카라멜시럽 자동 발주
 		cha = (inventory.getCaramelL()-inventory.getCaramel());	
 		all = inventory.getCaramel()+cha;
 		Ncaramel += all;
-		inventory.setNcaramel(Ncaramel);
+		Inventory.setNcaramel(Ncaramel);
 
 		// 자몽 자동 발주
 		cha = (inventory.getGrapefruitL()-inventory.getGrapefruit());
 		all = inventory.getGrapefruit()+cha;
 		Ngrapefruit += all;
-		inventory.setNgrapefruit(Ngrapefruit);
+		Inventory.setNgrapefruit(Ngrapefruit);
 
 		// 탄산수 자동 발주
 		cha = (inventory.getSpawaterL()-inventory.getSpawater());	
 		all = inventory.getSpawater()+cha;
 		Nspawater += all;
-		inventory.setNspawater(Nspawater);
+		Inventory.setNspawater(Nspawater);
 
 		// 요거트파우더 자동 발주
 		cha = (inventory.getYogurtpowderL()-inventory.getYogurtpowder());	
 		all = inventory.getYogurtpowder()+cha;
 		Nyogurtpowder += all;
-		inventory.setNyogurtpowder(Nyogurtpowder);
+		Inventory.setNyogurtpowder(Nyogurtpowder);
 
 		// 티백 자동 발주
 		cha = (inventory.getTeabagL()-inventory.getTeabag());	
 		all = inventory.getTeabag()+cha;
 		Nteabag += all;
-		inventory.setNteabag(Nteabag);
+		Inventory.setNteabag(Nteabag);
 		
 		// 고구마 자동 발주
 		cha = (inventory.getGogumaL()-inventory.getGoguma());	
 		all = inventory.getGoguma()+cha;
 		Ngoguma += all;
-		inventory.setNgoguma(Ngoguma);
+		Inventory.setNgoguma(Ngoguma);
 		
 		// 오렌지 자동 발주
 		cha = (inventory.getOrangeL()-inventory.getOrange());
 		all = inventory.getOrange()+cha;
 		Norange += all;
-		inventory.setNorange(Norange);
+		Inventory.setNorange(Norange);
 
 		// 케이크 자동 발주
 		cha = (inventory.getCakeL()-inventory.getCake());
 		all = inventory.getCake()+cha;
 		Ncake += all;
-		inventory.setNcake(Ncake);
+		Inventory.setNcake(Ncake);
 
 		// 베이글 자동 발주
 		cha = (inventory.getBagelL()-inventory.getBagel());
 		all = inventory.getBagel()+cha;
 		Nbagel += all;
-		inventory.setNbagel(Nbagel);
+		Inventory.setNbagel(Nbagel);
 		
 		// 스콘 자동 발주
 		cha = (inventory.getSconeL()-inventory.getScone());	
 		all = inventory.getScone()+cha;
 		Nscone += all;
-		inventory.setNscone(Nscone);
+		Inventory.setNscone(Nscone);
 		
 		// 마카롱 자동 발주
 		cha = (inventory.getMacaronL()-inventory.getMacaron());	
 		all = inventory.getMacaron()+cha;
 		Nmacaron += all;
-		inventory.setNmacaron(Nmacaron);
+		Inventory.setNmacaron(Nmacaron);
 		
 		// 쿠키 자동 발주
 		cha = (inventory.getCookieL()-inventory.getCookie());	
 		all = inventory.getCookie()+cha;
 		Ncookie += all;
-		inventory.setNcookie(Ncookie);
+		Inventory.setNcookie(Ncookie);
 		
 		// 크림치즈 자동 발주
 		cha = (inventory.getCreamcheeseL()-inventory.getCreamcheese());	
 		all = inventory.getCreamcheese()+cha;
 		Ncreamcheese += all;
-		inventory.setNcreamcheese(Ncreamcheese);
+		Inventory.setNcreamcheese(Ncreamcheese);
 		
 		// 딸기잼 자동 발주
 		cha = (inventory.getStroberryjamL()-inventory.getStroberryjam());	
 		all = inventory.getStroberryjam()+cha;
 		Nstroberryjam += all;
-		inventory.setNstroberryjam(Nstroberryjam);
+		Inventory.setNstroberryjam(Nstroberryjam);
 
 		// 휘핑크림 자동 발주
 		cha = (inventory.getWhipcreamL()-inventory.getWhipcream());	
 		all = inventory.getWhipcream()+cha;
 		Nwhipcream += all;
-		inventory.setNwhipcream(Nwhipcream);
+		Inventory.setNwhipcream(Nwhipcream);
 	
 		System.out.println("전체 품목을 자동 발주하였습니다.");
 		System.out.println();
@@ -205,26 +205,26 @@ class Balju_Control
 	  System.out.println("===================================================================");
       System.out.println("-------------------------------------------------------------------");
 	  System.out.println("   재고명\t          수량");
-	  System.out.printf("·  원두\t\t  %d개%n", inventory.getNbean()); //1.원두
-	  System.out.printf("·  우유\t\t  %d개%n", inventory.getNmilk()); //2.우유
-	  System.out.printf("·  초코시럽\t\t  %d개%n",inventory.getNchoco());//3.초코시럽
-	  System.out.printf("·  바닐라시럽\t\t  %d개%n",inventory.getNvanilla());//4.바닐라시럽
-	  System.out.printf("·  헤이즐넛시럽\t  %d개%n",inventory.getNhazel());//5.헤이즐넛시럽
-	  System.out.printf("·  카라멜시럽\t\t  %d개%n",inventory.getNcaramel());//6.카라멜시럽
-	  System.out.printf("·  자몽\t\t  %d개%n",inventory.getNgrapefruit());//7.자몽
-	  System.out.printf("·  탄산수\t\t  %d개%n",inventory.getNspawater());//8.탄산수
-	  System.out.printf("·  요거트파우더\t  %d개%n",inventory.getNyogurtpowder());//9.요거트파우더
-	  System.out.printf("·  티백\t\t  %d개%n",inventory.getNteabag());//10.티백
-	  System.out.printf("·  고구마\t\t  %d개%n",inventory.getNgoguma());//11.고구마
-	  System.out.printf("·  오렌지\t\t  %d개%n",inventory.getNorange());//12.오렌지
-	  System.out.printf("·  케이크\t\t  %d개%n",inventory.getNcake());//13.케이크
-	  System.out.printf("·  베이글\t\t  %d개%n",inventory.getNbagel());//14.베이글
-	  System.out.printf("·  스콘\t\t  %d개%n",inventory.getNscone());//15.스콘
-	  System.out.printf("·  마카롱\t\t  %d개%n",inventory.getNmacaron());//16.마카롱
-	  System.out.printf("·  쿠키\t\t  %d개%n",inventory.getNcookie());//17.쿠키
-	  System.out.printf("·  크림치즈\t\t  %d개%n",inventory.getNcreamcheese());//18.크림치즈
-	  System.out.printf("·  딸기잼\t\t  %d개%n",inventory.getNstroberryjam());//19.딸기잼
-	  System.out.printf("·  휘핑크림\t\t  %d개%n",inventory.getNwhipcream());//20.휘핑크림
+	  System.out.printf("·  원두\t\t  %d개%n", Inventory.getNbean()); //1.원두
+	  System.out.printf("·  우유\t\t  %d개%n", Inventory.getNmilk()); //2.우유
+	  System.out.printf("·  초코시럽\t\t  %d개%n",Inventory.getNchoco());//3.초코시럽
+	  System.out.printf("·  바닐라시럽\t\t  %d개%n",Inventory.getNvanilla());//4.바닐라시럽
+	  System.out.printf("·  헤이즐넛시럽\t  %d개%n",Inventory.getNhazel());//5.헤이즐넛시럽
+	  System.out.printf("·  카라멜시럽\t\t  %d개%n",Inventory.getNcaramel());//6.카라멜시럽
+	  System.out.printf("·  자몽\t\t  %d개%n",Inventory.getNgrapefruit());//7.자몽
+	  System.out.printf("·  탄산수\t\t  %d개%n",Inventory.getNspawater());//8.탄산수
+	  System.out.printf("·  요거트파우더\t  %d개%n",Inventory.getNyogurtpowder());//9.요거트파우더
+	  System.out.printf("·  티백\t\t  %d개%n",Inventory.getNteabag());//10.티백
+	  System.out.printf("·  고구마\t\t  %d개%n",Inventory.getNgoguma());//11.고구마
+	  System.out.printf("·  오렌지\t\t  %d개%n",Inventory.getNorange());//12.오렌지
+	  System.out.printf("·  케이크\t\t  %d개%n",Inventory.getNcake());//13.케이크
+	  System.out.printf("·  베이글\t\t  %d개%n",Inventory.getNbagel());//14.베이글
+	  System.out.printf("·  스콘\t\t  %d개%n",Inventory.getNscone());//15.스콘
+	  System.out.printf("·  마카롱\t\t  %d개%n",Inventory.getNmacaron());//16.마카롱
+	  System.out.printf("·  쿠키\t\t  %d개%n",Inventory.getNcookie());//17.쿠키
+	  System.out.printf("·  크림치즈\t\t  %d개%n",Inventory.getNcreamcheese());//18.크림치즈
+	  System.out.printf("·  딸기잼\t\t  %d개%n",Inventory.getNstroberryjam());//19.딸기잼
+	  System.out.printf("·  휘핑크림\t\t  %d개%n",Inventory.getNwhipcream());//20.휘핑크림
 	  System.out.println("-------------------------------------------------------------------");
 	  System.out.println("===================================================================");
 	  System.out.println();
@@ -257,11 +257,11 @@ class Balju_Control
 				cha = (inventory.getMilkL()-inventory.getMilk());	 
 				all	=  inventory.getMilk() + cha;
 				Nmilk += all;				
-				inventory.setNmilk(Nmilk);
+				Inventory.setNmilk(Nmilk);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 우유 재고 : " + inventory.getNmilk());
+				System.out.println("현재 우유 재고 : " + Inventory.getNmilk());
 				System.out.println();
 			}
 			
@@ -271,11 +271,11 @@ class Balju_Control
 				cha = (inventory.getBeanL()-inventory.getBean());	
 				all = inventory.getBean()+cha;	
 				Nbean += all;					
-				inventory.setNbean(Nbean);
+				Inventory.setNbean(Nbean);
 		
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 원두 재고 : " + inventory.getNbean());	
+				System.out.println("현재 원두 재고 : " + Inventory.getNbean());	
 				System.out.println();
 			}
 
@@ -285,11 +285,11 @@ class Balju_Control
 				cha = (inventory.getChocoL()-inventory.getChoco());	
 				all = inventory.getChoco()+cha;
 				Nchoco += all;
-				inventory.setNchoco(Nchoco);
+				Inventory.setNchoco(Nchoco);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 초코시럽 재고 : " + inventory.getNchoco());	
+				System.out.println("현재 초코시럽 재고 : " + Inventory.getNchoco());	
 				System.out.println();
 			}
 			if(str.equals("바닐라시럽"))
@@ -298,11 +298,11 @@ class Balju_Control
 				cha = (inventory.getVanillaL()-inventory.getVanilla());	
 				all = inventory.getVanilla()+cha;
 				Nvanilla += all;
-				inventory.setNvanilla(Nvanilla);
+				Inventory.setNvanilla(Nvanilla);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 바닐라시럽 재고 : " + inventory.getNvanilla());	
+				System.out.println("현재 바닐라시럽 재고 : " + Inventory.getNvanilla());	
 				System.out.println();
 			}
 			if(str.equals("헤이즐넛시럽"))
@@ -311,11 +311,11 @@ class Balju_Control
 				cha = (inventory.getHazelL()-inventory.getHazel());	
 				all = inventory.getHazel()+cha;
 				Nhazel += all;
-				inventory.setNhazel(Nhazel);
+				Inventory.setNhazel(Nhazel);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 헤이즐넛시럽 재고 : " + inventory.getNhazel());	
+				System.out.println("현재 헤이즐넛시럽 재고 : " + Inventory.getNhazel());	
 				System.out.println();
 			}
 
@@ -325,11 +325,11 @@ class Balju_Control
 				cha = (inventory.getCaramelL()-inventory.getCaramel());	
 				all = inventory.getCaramel()+cha;
 				Ncaramel += all;
-				inventory.setNcaramel(Ncaramel);
+				Inventory.setNcaramel(Ncaramel);
 	
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 카라멜시럽 재고 : " + inventory.getNcaramel());	
+				System.out.println("현재 카라멜시럽 재고 : " + Inventory.getNcaramel());	
 				System.out.println();
 			}
 
@@ -339,11 +339,11 @@ class Balju_Control
 				cha = (inventory.getGrapefruitL()-inventory.getGrapefruit());
 				all = inventory.getGrapefruit()+cha;
 				Ngrapefruit += all;
-				inventory.setNgrapefruit(Ngrapefruit);
+				Inventory.setNgrapefruit(Ngrapefruit);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 자몽 재고 : " + inventory.getNgrapefruit());
+				System.out.println("현재 자몽 재고 : " + Inventory.getNgrapefruit());
 				System.out.println();
 			}
 
@@ -353,11 +353,11 @@ class Balju_Control
 				cha = (inventory.getSpawaterL()-inventory.getSpawater());	
 				all = inventory.getSpawater()+cha;
 				Nspawater += all;
-				inventory.setNspawater(Nspawater);
+				Inventory.setNspawater(Nspawater);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 탄산수 재고 : " + inventory.getNspawater());
+				System.out.println("현재 탄산수 재고 : " + Inventory.getNspawater());
 				System.out.println();
 			}
 
@@ -367,11 +367,11 @@ class Balju_Control
 				cha = (inventory.getYogurtpowderL()-inventory.getYogurtpowder());	
 				all = inventory.getYogurtpowder()+cha;
 				Nyogurtpowder += all;
-				inventory.setNyogurtpowder(Nyogurtpowder);
+				Inventory.setNyogurtpowder(Nyogurtpowder);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 요거트파우더 재고 : " + inventory.getNyogurtpowder());
+				System.out.println("현재 요거트파우더 재고 : " + Inventory.getNyogurtpowder());
 				System.out.println();
 			}
 
@@ -381,11 +381,11 @@ class Balju_Control
 				cha = (inventory.getTeabagL()-inventory.getTeabag());	
 				all = inventory.getTeabag()+cha;
 				Nteabag += all;
-				inventory.setNteabag(Nteabag);
+				Inventory.setNteabag(Nteabag);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 티백 재고 : " + inventory.getNteabag());
+				System.out.println("현재 티백 재고 : " + Inventory.getNteabag());
 				System.out.println();
 			}
 
@@ -395,11 +395,11 @@ class Balju_Control
 				cha = (inventory.getGogumaL()-inventory.getGoguma());	
 				all = inventory.getGoguma()+cha;
 				Ngoguma += all;
-				inventory.setNgoguma(Ngoguma);
+				Inventory.setNgoguma(Ngoguma);
 		
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 고구마 재고 : " + inventory.getNgoguma());
+				System.out.println("현재 고구마 재고 : " + Inventory.getNgoguma());
 				System.out.println();
 			}
 
@@ -409,11 +409,11 @@ class Balju_Control
 				cha = (inventory.getOrangeL()-inventory.getOrange());
 				all = inventory.getOrange()+cha;
 				Norange += all;
-				inventory.setNorange(Norange);
+				Inventory.setNorange(Norange);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 오렌지 재고 : " + inventory.getNorange());
+				System.out.println("현재 오렌지 재고 : " + Inventory.getNorange());
 				System.out.println();
 			}
 
@@ -423,11 +423,11 @@ class Balju_Control
 				cha = (inventory.getCakeL()-inventory.getCake());
 				all = inventory.getCake()+cha;
 				Ncake += all;
-				inventory.setNcake(Ncake);
+				Inventory.setNcake(Ncake);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 케이크 재고 : " + inventory.getNcake());
+				System.out.println("현재 케이크 재고 : " + Inventory.getNcake());
 				System.out.println();
 			}
 
@@ -437,11 +437,11 @@ class Balju_Control
 				cha = (inventory.getBagelL()-inventory.getBagel());
 				all = inventory.getBagel()+cha;
 				Nbagel += all;
-				inventory.setNbagel(Nbagel);
+				Inventory.setNbagel(Nbagel);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 베이글 재고 : " + inventory.getNbagel());
+				System.out.println("현재 베이글 재고 : " + Inventory.getNbagel());
 				System.out.println();
 			}
 
@@ -451,11 +451,11 @@ class Balju_Control
 				cha = (inventory.getSconeL()-inventory.getScone());	
 				all = inventory.getScone()+cha;
 				Nscone += all;
-				inventory.setNscone(Nscone);
+				Inventory.setNscone(Nscone);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 스콘 재고 : " + inventory.getNscone());
+				System.out.println("현재 스콘 재고 : " + Inventory.getNscone());
 				System.out.println();
 			}
 
@@ -465,11 +465,11 @@ class Balju_Control
 				cha = (inventory.getMacaronL()-inventory.getMacaron());	
 				all = inventory.getMacaron()+cha;
 				Nmacaron += all;
-				inventory.setNmacaron(Nmacaron);
+				Inventory.setNmacaron(Nmacaron);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 마카롱 재고 : " + inventory.getNmacaron());
+				System.out.println("현재 마카롱 재고 : " + Inventory.getNmacaron());
 				System.out.println();
 			}
 
@@ -479,11 +479,11 @@ class Balju_Control
 				cha = (inventory.getCookieL()-inventory.getCookie());	
 				all = inventory.getCookie()+cha;
 				Ncookie += all;
-				inventory.setNcookie(Ncookie);
+				Inventory.setNcookie(Ncookie);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 쿠키 재고 : " + inventory.getNcookie());
+				System.out.println("현재 쿠키 재고 : " + Inventory.getNcookie());
 				System.out.println();
 			}
 
@@ -493,11 +493,11 @@ class Balju_Control
 				cha = (inventory.getCreamcheeseL()-inventory.getCreamcheese());	
 				all = inventory.getCreamcheese()+cha;
 				Ncreamcheese += all;
-				inventory.setNcreamcheese(Ncreamcheese);
+				Inventory.setNcreamcheese(Ncreamcheese);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 크림치즈 재고 : " + inventory.getNcreamcheese());
+				System.out.println("현재 크림치즈 재고 : " + Inventory.getNcreamcheese());
 				System.out.println();
 			}
 
@@ -507,11 +507,11 @@ class Balju_Control
 				cha = (inventory.getStroberryjamL()-inventory.getStroberryjam());	
 				all = inventory.getStroberryjam()+cha;
 				Nstroberryjam += all;
-				inventory.setNstroberryjam(Nstroberryjam);
+				Inventory.setNstroberryjam(Nstroberryjam);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 딸기잼 재고 : " + inventory.getNstroberryjam());
+				System.out.println("현재 딸기잼 재고 : " + Inventory.getNstroberryjam());
 				System.out.println();
 			}
 			
@@ -521,11 +521,11 @@ class Balju_Control
 				cha = (inventory.getWhipcreamL()-inventory.getWhipcream());	
 				all = inventory.getWhipcream()+cha;
 				Nwhipcream += all;
-				inventory.setNwhipcream(Nwhipcream);
+				Inventory.setNwhipcream(Nwhipcream);
 
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 휘핑크림 재고 : " + inventory.getNwhipcream());
+				System.out.println("현재 휘핑크림 재고 : " + Inventory.getNwhipcream());
 				System.out.println();
 			}
 
@@ -556,8 +556,6 @@ class Balju_Control
 		
 		Scanner sc = new Scanner(System.in);
 
-		Inventory inventory = new Inventory();
-		
 		do
 		{	
 			System.out.println();
@@ -570,12 +568,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNmilk(inventory.getNmilk()+su);
+				Inventory.setNmilk(Inventory.getNmilk()+su);
 				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 우유 재고 : " + inventory.getNmilk());
+				System.out.println("현재 우유 재고 : " + Inventory.getNmilk());
 			}
 			
 
@@ -586,12 +584,12 @@ class Balju_Control
 				su = sc.nextInt();
 
 				
-				inventory.setNbean(inventory.getNbean()+su);
+				Inventory.setNbean(Inventory.getNbean()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 원두 재고 : " + inventory.getNbean());	
+				System.out.println("현재 원두 재고 : " + Inventory.getNbean());	
 				
 			}
 
@@ -601,12 +599,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNchoco(inventory.getNchoco()+su);
+				Inventory.setNchoco(Inventory.getNchoco()+su);
 				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 초코시럽 재고 : " + inventory.getNchoco());	
+				System.out.println("현재 초코시럽 재고 : " + Inventory.getNchoco());	
 				
 			}
 
@@ -616,12 +614,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNvanilla(inventory.getNvanilla()+su);
+				Inventory.setNvanilla(Inventory.getNvanilla()+su);
 				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 바닐라시럽 재고 : " + inventory.getNvanilla());	
+				System.out.println("현재 바닐라시럽 재고 : " + Inventory.getNvanilla());	
 				
 			}
 
@@ -631,12 +629,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNhazel(inventory.getNhazel()+su);
+				Inventory.setNhazel(Inventory.getNhazel()+su);
 				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 헤이즐넛시럽 재고 : " + inventory.getNhazel());	
+				System.out.println("현재 헤이즐넛시럽 재고 : " + Inventory.getNhazel());	
 				
 			}
 
@@ -646,12 +644,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNcaramel(inventory.getNcaramel()+su);
+				Inventory.setNcaramel(Inventory.getNcaramel()+su);
 				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 카라멜시럽 재고 : " + inventory.getNcaramel());	
+				System.out.println("현재 카라멜시럽 재고 : " + Inventory.getNcaramel());	
 				
 			}
 
@@ -661,12 +659,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNgrapefruit(inventory.getNgrapefruit()+su);
+				Inventory.setNgrapefruit(Inventory.getNgrapefruit()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 자몽 재고 : " + inventory.getNgrapefruit());
+				System.out.println("현재 자몽 재고 : " + Inventory.getNgrapefruit());
 				
 			}
 
@@ -676,12 +674,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNspawater(inventory.getNspawater()+su);
+				Inventory.setNspawater(Inventory.getNspawater()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 탄산수 재고 : " + inventory.getNspawater());
+				System.out.println("현재 탄산수 재고 : " + Inventory.getNspawater());
 				
 			}
 
@@ -691,12 +689,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 				
-				inventory.setNyogurtpowder(inventory.getNyogurtpowder()+su);
+				Inventory.setNyogurtpowder(Inventory.getNyogurtpowder()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 요거트파우더 재고 : " + inventory.getNyogurtpowder());
+				System.out.println("현재 요거트파우더 재고 : " + Inventory.getNyogurtpowder());
 				
 			}
 
@@ -706,12 +704,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 			
-				inventory.setNteabag(inventory.getNteabag()+su);
+				Inventory.setNteabag(Inventory.getNteabag()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 티백 재고 : " + inventory.getNteabag());
+				System.out.println("현재 티백 재고 : " + Inventory.getNteabag());
 				
 			}
 
@@ -721,12 +719,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNgoguma(inventory.getNgoguma()+su);
+				Inventory.setNgoguma(Inventory.getNgoguma()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 고구마 재고 : " + inventory.getNgoguma());
+				System.out.println("현재 고구마 재고 : " + Inventory.getNgoguma());
 				
 			}
 
@@ -736,12 +734,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNorange(inventory.getNorange()+su);
+				Inventory.setNorange(Inventory.getNorange()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 오렌지 재고 : " + inventory.getNorange());
+				System.out.println("현재 오렌지 재고 : " + Inventory.getNorange());
 				
 			}
 
@@ -752,10 +750,10 @@ class Balju_Control
 				su = sc.nextInt();
 				
 				System.out.println();
-				inventory.setNcake(inventory.getNcake()+su);
+				Inventory.setNcake(Inventory.getNcake()+su);
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 케이크 재고 : " + inventory.getNcake());
+				System.out.println("현재 케이크 재고 : " + Inventory.getNcake());
 				
 			}
 
@@ -765,12 +763,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNbagel(inventory.getNbagel()+su);
+				Inventory.setNbagel(Inventory.getNbagel()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 베이글 재고 : " + inventory.getNbagel());
+				System.out.println("현재 베이글 재고 : " + Inventory.getNbagel());
 				
 			}
 
@@ -780,12 +778,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNscone(inventory.getNscone()+su);
+				Inventory.setNscone(Inventory.getNscone()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 스콘 재고 : " + inventory.getNscone());
+				System.out.println("현재 스콘 재고 : " + Inventory.getNscone());
 				
 			}
 
@@ -795,12 +793,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 		
-				inventory.setNmacaron(inventory.getNmacaron()+su);
+				Inventory.setNmacaron(Inventory.getNmacaron()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 마카롱 재고 : " + inventory.getNmacaron());
+				System.out.println("현재 마카롱 재고 : " + Inventory.getNmacaron());
 				
 			}
 
@@ -810,12 +808,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNcookie(inventory.getNcookie()+su);
+				Inventory.setNcookie(Inventory.getNcookie()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 쿠키 재고 : " + inventory.getNcookie());
+				System.out.println("현재 쿠키 재고 : " + Inventory.getNcookie());
 				
 			}
 
@@ -825,12 +823,12 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNcreamcheese(inventory.getNcreamcheese()+su);
+				Inventory.setNcreamcheese(Inventory.getNcreamcheese()+su);
 
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 크림치즈 재고 : " + inventory.getNcreamcheese());
+				System.out.println("현재 크림치즈 재고 : " + Inventory.getNcreamcheese());
 				
 			}
 
@@ -840,11 +838,11 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNstroberryjam(inventory.getNstroberryjam()+su);
+				Inventory.setNstroberryjam(Inventory.getNstroberryjam()+su);
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 딸기잼 재고 : " + inventory.getNstroberryjam());
+				System.out.println("현재 딸기잼 재고 : " + Inventory.getNstroberryjam());
 				
 			}
 			
@@ -854,11 +852,11 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
-				inventory.setNwhipcream(inventory.getNwhipcream()+su);
+				Inventory.setNwhipcream(Inventory.getNwhipcream()+su);
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n",str);
 				System.out.println();
-				System.out.println("현재 휘핑크림 재고 : " + inventory.getNwhipcream());
+				System.out.println("현재 휘핑크림 재고 : " + Inventory.getNwhipcream());
 				
 			}
 

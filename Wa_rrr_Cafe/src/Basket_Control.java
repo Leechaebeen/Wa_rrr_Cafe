@@ -1,6 +1,4 @@
 
-
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
 
@@ -22,7 +20,6 @@ class Basket_Control
 	  System.out.println("-------------------------------------------------------------------");
 
       Iterator<Cafe_Select> it = Cafe_Menus.vCafe_Select.iterator(); //    vCafe_Select 에 저장되어있는 <Cafe_Select> 타입 객체  
-      Cafe_Menus cafe_menus = new Cafe_Menus();
 
       Pay_Control pay_control = new Pay_Control();
       pay_control.pay();
