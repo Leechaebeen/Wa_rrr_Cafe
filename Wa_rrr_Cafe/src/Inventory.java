@@ -2,64 +2,44 @@
 class Inventory	
 {										
 	private static int bean; //원두
-	private static int beanL;//원두기준값	
 
 	private static int milk;//우유
-	private static int milkL;//우유기준값
 
 	private static int choco; //초코시럽
-	private static int chocoL;
 
 	private static int vanilla; //바닐라시럽
-	private static int vanillaL;
 
 	private static int hazel;	// 헤이즐넛시럽
-	private static int hazelL;
 
 	private static int caramel;	//카라멜시럽
-	private static int caramelL;
 
 	private static int grapefruit;//자몽
-	private static int grapefruitL;//자몽기준값
 
 	private static int spawater;//탄산수
-	private static int spawaterL;//탄산수 기준값
 
 	private static int yogurtpowder;//요거트파우더
-	private static int yogurtpowderL;//요거트파우더 기준값
 
 	private static int teabag;//티백
-	private static int teabagL;//티백 기준값
 
 	private static int goguma;//고구마
-	private static int gogumaL;//고구마 기준값
 
 	private static int orange;//오렌지
-	private static int orangeL;//오렌지 기준값
 
 	private static int cake;//케이크
-	private static int cakeL;//케이크 기준값
 
 	private static int bagel;//베이글
-	private static int bagelL;//베이글 기준값
 
 	private static int scone;//스콘
-	private static int sconeL;//스콘 기준값
 
 	private static int macaron;//마카롱
-	private static int macaronL;//마카롱 기준값
 
 	private static int cookie;//쿠키
-	private static int cookieL;//쿠키 기준값
 
 	private static int creamcheese;//크림치즈
-	private static int creamcheeseL;//크림치즈 기준값
 
 	private static int stroberryjam;//딸기잼
-	private static int stroberryjamL;//딸기잼 기준값
 
 	private static int whipcream;//휘핑크림
-	private static int whipcreamL;//휘핑크림 기준값
 
 	///////////////////////누적 수량 받을 속성(이채빈)////////////////////
 
@@ -84,6 +64,7 @@ class Inventory
 	private static int Nstroberryjam;//딸기잼
 	private static int Nwhipcream;//휘핑크림
 
+	
 	///////////////////////////누적수량 게터세터////////////////////////////
 	public static int getNbean() {
 		return Nbean;
@@ -207,39 +188,24 @@ class Inventory
 	}
 
 
-	//////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////// 자동발주기준값
+	
 	public void setBean(int bean)
 	{
-		this.bean = bean;
+		Inventory.bean = bean;
 	}
 	public int getBean()
 	{
 		return bean;
 	}
-	public void setBeanL(int beanL)
-	{
-		this.beanL = beanL;
-	}
-	public int getBeanL()
-	{
-		return beanL;
-	}
-
+	
 	public void setMilk(int milk)
 	{
-		this.milk = milk;
+		Inventory.milk = milk;
 	}
 	public int getMilk()
 	{
 		return milk;
-	}
-	public void setMilkL(int milkL)
-	{
-		this.milkL = milkL;
-	}
-	public int getMilkL()
-	{
-		return milkL;
 	}
 
 	public int getChoco() 
@@ -248,15 +214,7 @@ class Inventory
 	}
 	public void setChoco(int choco) 
 	{
-		this.choco = choco;
-	}
-	public int getChocoL() 
-	{
-		return chocoL;
-	}
-	public void setChocoL(int chocoL) 
-	{
-		this.chocoL = chocoL;
+		Inventory.choco = choco;
 	}
 	public int getVanilla() 
 	{
@@ -264,15 +222,7 @@ class Inventory
 	}
 	public void setVanilla(int vanilla) 
 	{
-		this.vanilla = vanilla;
-	}
-	public int getVanillaL() 
-	{
-		return vanillaL;
-	}
-	public void setVanillaL(int vanillaL) 
-	{
-		this.vanillaL = vanillaL;
+		Inventory.vanilla = vanilla;
 	}
 	public int getHazel() 
 	{
@@ -280,15 +230,7 @@ class Inventory
 	}
 	public void setHazel(int hazel) 
 	{
-		this.hazel = hazel;
-	}
-	public int getHazelL() 
-	{
-		return hazelL;
-	}
-	public void setHazelL(int hazelL) 
-	{
-		this.hazelL = hazelL;
+		Inventory.hazel = hazel;
 	}
 	public int getCaramel() 
 	{
@@ -296,33 +238,17 @@ class Inventory
 	}
 	public void setCaramel(int caramel) 
 	{
-		this.caramel = caramel;
+		Inventory.caramel = caramel;
 	}
-	public int getCaramelL() 
-	{
-		return caramelL;
-	}
-	public void setCaramelL(int caramelL) 
-	{
-		this.caramelL = caramelL;
-	}
+
 	public  int getGrapefruit() {
 		return grapefruit;
 	}
 	public void setGrapefruit(int grapefruit) 
 	{
-		this.grapefruit = grapefruit;
+		Inventory.grapefruit = grapefruit;
 	}
 	
-	public  int getGrapefruitL() 
-	{
-		return grapefruitL;
-	}
-	public  void setGrapefruitL(int grapefruitL) 
-	{
-		this.grapefruitL = grapefruitL;
-	}
-
 	
 	public  int getSpawater() 
 	{
@@ -330,17 +256,8 @@ class Inventory
 	}
 	public  void setSpawater(int spawater) 
 	{
-		this.spawater = spawater;
+		Inventory.spawater = spawater;
 	}
-	public  int getSpawaterL() 
-	{
-		return spawaterL;
-	}
-	public  void setSpawaterL(int spawaterL) 
-	{
-		this.spawaterL = spawaterL;
-	}
-
 	public  int getYogurtpowder() 
 	{
 		return yogurtpowder;
@@ -348,17 +265,7 @@ class Inventory
 
 	public  void setYogurtpowder(int yogurtpowder) 
 	{
-		this.yogurtpowder = yogurtpowder;
-	}
-
-	public  int getYogurtpowderL()
-	{
-		return yogurtpowderL;
-	}
-
-	public  void setYogurtpowderL(int yogurtpowderL)
-	{
-		this.yogurtpowderL = yogurtpowderL;
+		Inventory.yogurtpowder = yogurtpowder;
 	}
 
 	public  int getTeabag() 
@@ -368,16 +275,7 @@ class Inventory
 
 	public  void setTeabag(int teabag) 
 	{
-		this.teabag = teabag;
-	}
-	public  int getTeabagL()
-	{
-		return teabagL;
-	}
-
-	public  void setTeabagL(int teabagL) 
-	{
-		this.teabagL = teabagL;
+		Inventory.teabag = teabag;
 	}
 	public  int getGoguma() 
 	{
@@ -385,18 +283,8 @@ class Inventory
 	}
 	public  void setGoguma(int goguma) 
 	{
-		this.goguma = goguma;
+		Inventory.goguma = goguma;
 	}
-	public  int getGogumaL() 
-	{
-		return gogumaL;
-	}
-
-	public  void setGogumaL(int gogumaL) 
-	{
-		this.gogumaL = gogumaL;
-	}
-
 	public  int getOrange()
 	{ 
 		return orange;
@@ -404,18 +292,9 @@ class Inventory
 
 	public  void setOrange(int orange) 
 	{
-		this.orange = orange;
+		Inventory.orange = orange;
 	}
 
-	public  int getOrangeL() 
-	{
-		return orangeL;
-	}
-
-	public  void setOrangeL(int orangeL) 
-	{
-		this.orangeL = orangeL;
-	}
 
 	public  int getCake() 
 	{
@@ -423,17 +302,7 @@ class Inventory
 	}
 	public  void setCake(int cake)
 	{
-		this.cake = cake;
-	}
-
-	public  int getCakeL() 
-	{
-		return cakeL;
-	}
-
-	public  void setCakeL(int cakeL) 
-	{
-		this.cakeL = cakeL;
+		Inventory.cake = cake;
 	}
 
 	public  int getBagel() 
@@ -443,18 +312,9 @@ class Inventory
 
 	public  void setBagel(int bagel) 
 	{
-		this.bagel = bagel;
+		Inventory.bagel = bagel;
 	}
 
-	public  int getBagelL() 
-	{
-		return bagelL;
-	}
-
-	public  void setBagelL(int bagelL)
-	{
-		this.bagelL = bagelL;
-	}
 	public  int getScone()
 	{
 		return scone;
@@ -462,18 +322,9 @@ class Inventory
 
 	public  void setScone(int scone) 
 	{
-		this.scone = scone;
+		Inventory.scone = scone;
 	}
 
-	public  int getSconeL()
-	{
-		return sconeL;
-	}
-
-	public  void setSconeL(int sconeL)
-	{
-		this.sconeL = sconeL;
-	}
 
 	public  int getMacaron() 
 	{
@@ -482,16 +333,7 @@ class Inventory
 
 	public  void setMacaron(int macaron) 
 	{
-		this.macaron = macaron;
-	}
-	public  int getMacaronL()
-	{
-		return macaronL;
-	}
-
-	public  void setMacaronL(int macaronL)
-	{
-		this.macaronL = macaronL;
+		Inventory.macaron = macaron;
 	}
 
 	public  int getCookie() 
@@ -501,17 +343,7 @@ class Inventory
 
 	public  void setCookie(int cookie)
 	{
-		this.cookie = cookie;
-	}
-
-	public  int getCookieL() 
-	{
-		return cookieL;
-	}
-
-	public  void setCookieL(int cookieL)
-	{
-		this.cookieL = cookieL;
+		Inventory.cookie = cookie;
 	}
 
 	public  int getCreamcheese()
@@ -521,17 +353,7 @@ class Inventory
 
 	public  void setCreamcheese(int creamcheese) 
 	{
-		this.creamcheese = creamcheese;
-	}
-
-	public  int getCreamcheeseL() 
-	{
-		return creamcheeseL;
-	}
-
-	public  void setCreamcheeseL(int creamcheeseL) 
-	{
-		this.creamcheeseL = creamcheeseL;
+		Inventory.creamcheese = creamcheese;
 	}
 
 	public  int getStroberryjam() 
@@ -541,18 +363,9 @@ class Inventory
 
 	public  void setStroberryjam(int stroberryjam)
 	{
-		this.stroberryjam = stroberryjam;
+		Inventory.stroberryjam = stroberryjam;
 	}
 
-	public  int getStroberryjamL() 
-	{
-		return stroberryjamL;
-	}
-
-	public  void setStroberryjamL(int stroberryjamL) 
-	{
-		this.stroberryjamL = stroberryjamL;
-	}
 
 	public  int getWhipcream() 
 	{
@@ -561,18 +374,9 @@ class Inventory
 
 	public  void setWhipcream(int whipcream) 
 	{
-		this.whipcream = whipcream;
+		Inventory.whipcream = whipcream;
 	}
 
-	public  int getWhipcreamL() 
-	{
-		return whipcreamL;
-	}
-
-	public  void setWhipcreamL(int whipcreamL)
-	{
-		this.whipcreamL = whipcreamL;
-	}
 	
 
 }

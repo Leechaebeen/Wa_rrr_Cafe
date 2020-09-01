@@ -62,8 +62,7 @@ class Cafe_Menus
 		System.out.println("===================================================================");
 		System.out.println("                            Wa_rrr CAFE                            ");
 		System.out.println("-------------------------------------------------------------------");
-		//System.out.printf("%61d-%d-%d\n",year,month,date);
-		System.out.printf("%61d-%d-%d\n",year,month,date +TestCalendar.datePlus);						// 오늘 날짜 출력 메소드
+		System.out.printf("%61d-%d-%d\n",year,month,date +TestCalendar.datePlus);// 오늘 날짜 출력 메소드
 		cafe_control.today_coffee();		// 랜덤 커피 할인 메뉴 연산 메소드
 		cafe_control.today_coffee_print();	// 랜덤 커피 메뉴 출력 메소드
 		System.out.println("-------------------------------------------------------------------");
@@ -274,12 +273,14 @@ class Cafe_Menus
 	  check = true;  //-- 카테고리 선택값 검사
 
     do{
-
-			if(sel<1||sel>9999){
-            System.out.println(" 1~3중에 선택해주세요.");
-            firPrint();
-			}else{			
-					check = false;
+			if(sel<1||sel>9999)
+			{
+				System.out.println(" 1~3중에 선택해주세요.");
+				firPrint();
+			}
+			else
+			{			
+				check = false;
 			}
       }while(check);
 
@@ -291,14 +292,12 @@ class Cafe_Menus
    public void menuRun(){
 
 	   Cafe_Menus cafe_menus = new Cafe_Menus();	// Cafe_Menus 클래스 인스턴스 생성
-	   I_minus i_minus = new I_minus();
-	   Pay_Control pay_control = new Pay_Control();
 	   
 		 switch(sel){
          
          case Cafe_Menus.COFFEE: cafe_menus.coffeePrint();	//1.COFFEE 출력 메소드
-		 						 cafe_menus.HOT();			// 핫아이스 옵션 선택 메소드
-								 cafe_menus.coffeeOp();     // 커피 옵션 선택 메소드 
+		 						 cafe_menus.HOT();			// 핫아이스 옵션 출력 메소드
+								 cafe_menus.coffeeOp();     // 커피 옵션 출력 메소드 
 								 cafe_menus.go();			// 1.장바구니 이동 2. 다른 메뉴 추가 
 
 									break;
@@ -352,11 +351,11 @@ class Cafe_Menus
 	public void menuGo()
 		{
 			Cafe_Menus cafe_menus = new Cafe_Menus();	// Cafe_Menus 클래스 인스턴스 생성
-			Pay_Control pay_control2 = new Pay_Control();
+			Pay_Control pay_control = new Pay_Control();
 			Basket_Control basket_control = new Basket_Control();
 			
 			// 결제 금액 연산 메소드 
-			pay_control2.pay();		//-- 결제금액 제대로 나오기 위한 위치!!! 확정@@@ 
+			pay_control.pay();		//-- 결제금액 제대로 나오기 위한 위치!!! 확정@@@ 
 			
 			switch(sel2){
 				
