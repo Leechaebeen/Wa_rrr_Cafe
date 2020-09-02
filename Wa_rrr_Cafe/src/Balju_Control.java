@@ -31,7 +31,7 @@ class Balju_Control
 
 	// 자동 발주값 설정 관리 메소드
 
-	static int standard; // 자동발주수량
+	static int standard = 5; // 자동발주수량 초기값 = 5
 
 	public void setGap()
 	{
@@ -132,7 +132,7 @@ class Balju_Control
 
 		// 발주금액 연산 메소드
 		Money_Control money_control = new Money_Control();
-		money_control.money_Balju();
+		money_control.money_Balju(Balju_Control.standard);
 
 		System.out.println("전체 품목을 자동 발주하였습니다.");
 		System.out.println();
@@ -166,10 +166,10 @@ class Balju_Control
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("===================================================================");
 		System.out.println();
-
+		
+		// 자동발주금액 정산 메소드 호출(2020.09.02 추가)
 		Money_Control mc = new Money_Control();
-
-		mc.money_Balju();
+		mc.money_Balju(Balju_Control.standard);
 
 	}
 
@@ -415,9 +415,10 @@ class Balju_Control
 			}
 		} while (flag);
 
+		// 자동발주금액 정산 메소드 호출(2020.09.02 추가)
 		Money_Control mc = new Money_Control();
-
-		mc.money_Balju();
+		
+		mc.money_Balju(Balju_Control.standard);
 
 	}
 
@@ -744,7 +745,8 @@ class Balju_Control
 
 		Money_Control mc = new Money_Control();
 
-		mc.money_Balju();
+		// 수동발주금액 정산 메소드 추가예정 
+		//
 
 	}
 

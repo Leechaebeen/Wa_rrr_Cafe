@@ -10,8 +10,9 @@ class Money_Control
 	Money m = new Money();// 머니 인스턴스 생성
 
 	// 속성: 거스름돈 비울때 거스름돈통 값을 담아둘 속성
-
-	int sum = 0; // 발주금액의 최종 합계를 정산해주는 sum 변수 선언.
+	
+	// 2020.09.02 static 으로 변경
+	static int sum = 0; // 발주금액의 최종 합계를 정산해주는 sum 변수 선언.
 
 	// 거스름돈 확인 메소드
 	public void hakin()
@@ -168,37 +169,49 @@ class Money_Control
 		m.setCard_SalesM(m.getCard_SalesM() + Pay_Control.allPay);
 	}
 
-	// 발주 금액 정산 메소드() 일을 기준.
-	public void money_Balju() // 수정 예정.
+	// 자동발주금액 정산 메소드() 일을 기준.
+	// 2020.09.02 수정
+	public void money_Balju(int standard) 
 	{
-		Balju_Price bp = new Balju_Price(); // 발주가격 인스턴스 생성
-
+		Balju_Price balju_price = new Balju_Price(); // 발주가격 인스턴스 생성
+		
+		/*
+		// 기존코드
 		// 원두의 발주가격과 원두의 재고수량을 곱하여 원두의 발주금액을 누적변수 sum에 더해준다.
 		sum += bp.getBean() * Inventory.getNbean();
-
+		*/
+		
+		sum += balju_price.getBean() * standard;
+		
+		// 원두의 발주가격 * 발주수량 곱하여 누적변수 sum 에 더한다
+		
 		// 자몽의 발주가격과 자몽의 재고수량을 곱하여 자몽의 발주금액을 누적변수 sum에 더해준다.
-		sum += bp.getGrapefruit() * Inventory.getNgrapefruit();
+		sum += balju_price.getGrapefruit() * standard;
 
 		// 원두 자몽과 같이 모든 재고의 가격과 재고수량을 곱한 재고의 발주금액을 누적변수 sum에 더해준다.
-		sum += bp.getSpawater() * Inventory.getNspawater();
-		sum += bp.getYogurtpowder() * Inventory.getNyogurtpowder();
-		sum += bp.getTeabag() * Inventory.getNteabag();
-		sum += bp.getGoguma() * Inventory.getNgoguma();
-		sum += bp.getOrange() * Inventory.getNorange();
-		sum += bp.getCake() * Inventory.getNcake();
-		sum += bp.getBagel() * Inventory.getNbagel();
-		sum += bp.getScone() * Inventory.getNscone();
-		sum += bp.getMacaron() * Inventory.getNmacaron();
-		sum += bp.getCookie() * Inventory.getNcookie();
-		sum += bp.getCreamcheese() * Inventory.getNcreamcheese();
-		sum += bp.getStroberryjam() * Inventory.getNstroberryjam();
-		sum += bp.getWhipcream() * Inventory.getNwhipcream();
+		sum += balju_price.getSpawater() * standard;
+		sum += balju_price.getYogurtpowder() * standard;
+		sum += balju_price.getTeabag() * standard;
+		sum += balju_price.getGoguma() * standard;
+		sum += balju_price.getOrange() * standard;
+		sum += balju_price.getCake() * standard;
+		sum += balju_price.getBagel() * standard;
+		sum += balju_price.getScone() * standard;
+		sum += balju_price.getMacaron() * standard;
+		sum += balju_price.getCookie() * standard;
+		sum += balju_price.getCreamcheese() * standard;
+		sum += balju_price.getStroberryjam() * standard;
+		sum += balju_price.getWhipcream() * standard;
 
-		m.setBalju_moneyD(sum); // 발주했던 모든 재고의 가격이 발주금액 변수에 담긴다.
+		Money.setBalju_moneyD(sum); // 발주했던 모든 재고의 가격이 발주금액 변수에 담긴다.
 
-		m.setBalju_moneyM(m.getBalju_moneyD()); // 일의 발주값이 월에 쌓이는 구조
+		Money.setBalju_moneyM(m.getBalju_moneyD()); // 일의 발주값이 월에 쌓이는 구조
 	}
 
+	// 2020.09.03 추가
+	// 수동발주금액 정산 메소드
+	
+	
 	// 순수익 정산 메소드()
 	// { 매출 - 발주금액 }
 	public int money_Profit()
