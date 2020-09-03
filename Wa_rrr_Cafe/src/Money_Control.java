@@ -210,7 +210,13 @@ class Money_Control
 
 	// 2020.09.03 추가
 	// 수동발주금액 정산 메소드
-	
+	public void money_Self_Balju(int balju_price, int su)
+	{
+		sum += balju_price * su;
+		Money.setBalju_moneyD(sum); // 발주했던 모든 재고의 가격이 일별 발주금액 변수에 담긴다.
+
+		Money.setBalju_moneyM(m.getBalju_moneyD()); // 일의 발주값이 월에 쌓이는 구조
+	}
 	
 	// 순수익 정산 메소드()
 	// { 매출 - 발주금액 }

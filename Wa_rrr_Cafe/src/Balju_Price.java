@@ -1,69 +1,70 @@
 
 // 발주 가격 속성 클래스(최호석)
+// 2020.09.03 수정 - 변수 static 속성 제거
 class Balju_Price   
 {
-	private static final int BEAN = 500;		// 원두가격 500원
+	private final int BEAN = 500;		// 원두가격 500원
 
-	private static final int MILK = 500;		// 우유가격 500원
+	private final int MILK = 500;		// 우유가격 500원
 
-	private static final int CHOCO = 100;		// 초코시럽가격 100원
+	private final int CHOCO = 100;		// 초코시럽가격 100원
 
-	private static final int VANILLA = 100;		// 바닐라시럽가격 100원
+	private final int VANILLA = 100;		// 바닐라시럽가격 100원
 
-	private static final int HAZEL = 100;		// 헤이즐넛시럽가격 100원
+	private final int HAZEL = 100;		// 헤이즐넛시럽가격 100원
 
-	private static final int CARAMEL = 100;		// 카라멜시럽가격 100원
+	private final int CARAMEL = 100;		// 카라멜시럽가격 100원
 
-	private static final int GRAPEFRUIT = 500;  // 자몽가격 500원
+	private final int GRAPEFRUIT = 500;  // 자몽가격 500원
 
-	private static final int SPAWATER = 500;	//탄산수:500원
+	private final int SPAWATER = 500;	//탄산수:500원
 
-	private static final int YOGURTPOWDER = 500;//요거트 파우더:500원
+	private final int YOGURTPOWDER = 500;//요거트 파우더:500원
 
-	private static final int TEABAG = 1000;		//티백:1000원
+	private final int TEABAG = 1000;		//티백:1000원
 
-	private static final int GOGUMA = 500;		//고구마 : 500원
+	private final int GOGUMA = 500;		//고구마 : 500원
 
-	private static final int ORANGE = 500;		//오렌지: 500원
+	private final int ORANGE = 500;		//오렌지: 500원
 
-	private static final int CAKE = 3000;		//케이크 : 3000원
+	private final int CAKE = 3000;		//케이크 : 3000원
 
-	private static final int BAGEL = 1500;		//베이글: 1500원
+	private final int BAGEL = 1500;		//베이글: 1500원
 
-	private static final int SCONE = 1000;		//스콘 : 1000원
+	private final int SCONE = 1000;		//스콘 : 1000원
 
-	private static final int MACARON = 1500;	//마카롱 : 1500원
+	private final int MACARON = 1500;	//마카롱 : 1500원
 
-	private static final int COOKIE = 1000;		//쿠키 : 1000원
+	private final int COOKIE = 1000;		//쿠키 : 1000원
 
-	private static final int CREAMCHEESE = 500;	//크림치즈 : 500원
+	private final int CREAMCHEESE = 500;	//크림치즈 : 500원
 
-	private static final int STROBERRYJAM = 500;//딸기잼 : 500원
+	private final int STROBERRYJAM = 500;//딸기잼 : 500원
 
-	private static final int WHIPCREAM = 100;	//휘핑크림 : 100원
+	private final int WHIPCREAM = 100;	//휘핑크림 : 100원
 
 
-	public  int getBean() 
+	public int getBean() 
 	{
 		return BEAN;
 	}
 
-	public  int getMilk()
+	public int getMilk()
 	{
 		return MILK;
 	}
 
-	public  int getChoco() 
+	public int getChoco() 
 	{
 		return CHOCO;
 	}
 
-	public  int getVanilla() 
+	public int getVanilla() 
 	{
 		return VANILLA;
 	}
 
-	public  int getHazel() 
+	public int getHazel() 
 	{
 		return HAZEL;
 	}

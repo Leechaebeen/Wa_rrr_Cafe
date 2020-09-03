@@ -177,10 +177,8 @@ class Balju_Control
 	public void auto()
 	{
 		String str; // -- 품목 입력받는 변수
-		int cha; // -- 발주 수량 입력받는 변수
 		boolean flag = true; // -- do while 문 반복 중단을 위한 변수
 
-		Inventory inventory = new Inventory();
 		Scanner sc = new Scanner(System.in);
 
 		do
@@ -430,7 +428,10 @@ class Balju_Control
 		boolean flag = true; // -- do while 문 반복 중단을 위한 변수
 
 		Scanner sc = new Scanner(System.in);
-
+		
+		// 발주 금액 인스턴스 추가
+		Balju_Price balju_price = new Balju_Price();
+		
 		do
 		{
 			System.out.println();
@@ -443,8 +444,14 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
+				// 재고 추가
 				Inventory.setNmilk(Inventory.getNmilk() + su);
-
+				
+				// 발주금액 추가 2020.09.03 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getMilk(), su);
+				
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -457,8 +464,13 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
+				// 재고추가
 				Inventory.setNbean(Inventory.getNbean() + su);
-
+				
+				// 발주금액 추가 2020.09.03 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getBean(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
