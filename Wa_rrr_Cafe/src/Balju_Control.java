@@ -451,7 +451,6 @@ class Balju_Control
 				Money_Control money_control = new Money_Control();
 				money_control.money_Self_Balju(balju_price.getMilk(), su);
 				
-				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -484,8 +483,13 @@ class Balju_Control
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
 
+				// 재고 추가
 				Inventory.setNchoco(Inventory.getNchoco() + su);
-
+				
+				// 발주금액 추가 
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getChoco(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -500,7 +504,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNvanilla(Inventory.getNvanilla() + su);
-
+				
+				// 발주금액 추가 
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getVanilla(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -515,7 +523,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNhazel(Inventory.getNhazel() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getHazel(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -530,7 +542,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNcaramel(Inventory.getNcaramel() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCaramel(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -545,7 +561,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNgrapefruit(Inventory.getNgrapefruit() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getGrapefruit(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -560,7 +580,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNspawater(Inventory.getNspawater() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getSpawater(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -575,7 +599,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNyogurtpowder(Inventory.getNyogurtpowder() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getYogurtpowder(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -590,7 +618,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNteabag(Inventory.getNteabag() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getTeabag(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -605,7 +637,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNgoguma(Inventory.getNgoguma() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getGoguma(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -620,7 +656,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNorange(Inventory.getNorange() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getOrange(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -633,9 +673,15 @@ class Balju_Control
 				System.out.println();
 				System.out.print("발주할 수량을 입력하세요: ");
 				su = sc.nextInt();
-
-				System.out.println();
+				
 				Inventory.setNcake(Inventory.getNcake() + su);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCake(), su);
+				
+				
+				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 케이크 재고 : " + Inventory.getNcake());
@@ -649,7 +695,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNbagel(Inventory.getNbagel() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getBagel(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -664,7 +714,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNscone(Inventory.getNscone() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getScone(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -679,7 +733,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNmacaron(Inventory.getNmacaron() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getMacaron(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -694,7 +752,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNcookie(Inventory.getNcookie() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCookie(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -709,7 +771,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNcreamcheese(Inventory.getNcreamcheese() + su);
-
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCreamcheese(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -724,6 +790,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNstroberryjam(Inventory.getNstroberryjam() + su);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getStroberryjam(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -738,6 +809,11 @@ class Balju_Control
 				su = sc.nextInt();
 
 				Inventory.setNwhipcream(Inventory.getNwhipcream() + su);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getWhipcream(), su);
+				
 				System.out.println();
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
@@ -754,11 +830,6 @@ class Balju_Control
 			}
 
 		} while (flag);
-
-		Money_Control mc = new Money_Control();
-
-		// 수동발주금액 정산 메소드 추가예정 
-		//
 
 	}
 

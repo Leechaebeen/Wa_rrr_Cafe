@@ -69,77 +69,77 @@ class Balju_Price
 		return HAZEL;
 	}
 
-	public  int getCaramel() 
+	public int getCaramel() 
 	{
 		return CARAMEL;
 	}
 
-	public  int getGrapefruit() 
+	public int getGrapefruit() 
 	{
 		return GRAPEFRUIT;
 	}
 
-	public  int getSpawater() 
+	public int getSpawater() 
 	{
 		return SPAWATER;
 	}
 
-	public  int getYogurtpowder() 
+	public int getYogurtpowder() 
 	{
 		return YOGURTPOWDER;
 	}
 
-	public  int getTeabag() 
+	public int getTeabag() 
 	{
 		return TEABAG;
 	}
 
-	public  int getGoguma() 
+	public int getGoguma() 
 	{
 		return GOGUMA;
 	}
 
-	public  int getOrange() 
+	public int getOrange() 
 	{
 		return ORANGE;
 	}
 
-	public  int getCake() 
+	public int getCake() 
 	{
 		return CAKE;
 	}
 
-	public  int getBagel() 
+	public int getBagel() 
 	{
 		return BAGEL;
 	}
 
-	public  int getScone() 
+	public int getScone() 
 	{
 		return SCONE;
 	}
 
-	public  int getMacaron() 
+	public int getMacaron() 
 	{
 		return MACARON;
 	}
 
-	public  int getCookie() 
+	public int getCookie() 
 	{
 		return COOKIE;
 	}
 
-	public  int getCreamcheese() 
+	public int getCreamcheese() 
 	{
 		return CREAMCHEESE;
 	}
 
-	public  int getStroberryjam() 
+	public int getStroberryjam() 
 	{
 		return STROBERRYJAM;
 	}
 
-	public  int getWhipcream() 
+	public int getWhipcream() 
 	{
 		return WHIPCREAM;
 	}
