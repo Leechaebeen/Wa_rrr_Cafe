@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Iterator;
 
 import java.util.Scanner;
@@ -19,7 +18,7 @@ class Pay_Control
 	
 	public void setCustomer(int costomer)
 	{
-		this.customer = costomer;
+		Pay_Control.customer = costomer;
 	}
 	public int getCustomer()
 	{
@@ -34,7 +33,7 @@ class Pay_Control
 	
 	public void setTotalPay(int totalPay)
 	{
-		this.totalPay = (mainPay+hiopPay+opPay);
+		Pay_Control.totalPay = (mainPay+hiopPay+opPay);
 	}
 
 	public int getTotalPay()
@@ -44,7 +43,7 @@ class Pay_Control
 
 	public void setAllPay(int allPay)
 	{
-		this.allPay = allPay;
+		Pay_Control.allPay = allPay;
 	}
 
 	public int getAllPay()
@@ -54,7 +53,7 @@ class Pay_Control
 
 	public void setMainPay(int mainPay)
 	{
-		this.mainPay = mainPay;
+		Pay_Control.mainPay = mainPay;
 	}
 
 	public int getMainPay()
@@ -64,7 +63,7 @@ class Pay_Control
 
 	public void setHiopPay(int hiopPay)
 	{
-		this.hiopPay = hiopPay;
+		Pay_Control.hiopPay = hiopPay;
 	}
 
 	public int getHiopPay()
@@ -74,7 +73,7 @@ class Pay_Control
 
 	public void setOpPay(int opPay)
 	{
-		this.opPay = opPay;
+		Pay_Control.opPay = opPay;
 	}
 
 	public int getOpPay()
@@ -87,10 +86,10 @@ class Pay_Control
    public void pay()
    {   
 
-	  //Cafe_Menus.vCafe_Select -- 사용자 선택값 담은 자료구조
-      //Cafe_Menus.vCafe_Select.get(0); 이런 방식으로 static 자료구조 호출
+	  //Cafe_Menus.cafe_select -- 사용자 선택값 담은 자료구조
+      //Cafe_Menus.cafe_select.get(0); 이런 방식으로 static 자료구조 호출
 
-      Iterator<Cafe_Select> it = Cafe_Menus.vCafe_Select.iterator(); //    vCafe_Select 에 저장되어있는 <Cafe_Select> 타입 객체  
+      Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
       
       Menus_Price menus_price = new Menus_Price(); // 사용자 가격 담은 클래스 객체 생성
       Pay_Control pay_control = new Pay_Control(); // TotalPay 담을 클래스 객체 생성 
@@ -438,7 +437,7 @@ class Pay_Control
 	// 스탬프 결제 메소드(주한별)
 	public void stampPay()	
 	{
-		stamp.hashMap.put("01030026023",10);	// Test 로 넣은 채빈이 번호
+		Stamp.hashMap.put("01030026023",10);	// Test 로 넣은 채빈이 번호
 		
 		// 스캐너 인스턴스 생성
 		Scanner sc = new Scanner(System.in);
@@ -477,7 +476,7 @@ class Pay_Control
 				System.out.println(" 남은 스탬프 개수 : "+Stamp.hashMap.get(phone));
 				
 				// 결제가 완료되었으므로 allPay의 변수 값을 '0'으로 초기화한다.
-				this.allPay=0;
+				Pay_Control.allPay=0;
 				
 				// costomer 수 1 증가
 				// 변수 costomerP는 결제를 완료한 후, 1이 더해진 새로운 costomer 수다.
@@ -494,7 +493,7 @@ class Pay_Control
 			// 전체금액에서 할인 금액 3,000 원 빼고 남은 금액을 추가결제해야 하는 경우
 			else
 			{
-				this.allPay = allPay-3000;
+				Pay_Control.allPay = allPay-3000;
 
 				System.out.println();
 				System.out.println(" 스탬프 결제로 3,000원 할인되었습니다.");

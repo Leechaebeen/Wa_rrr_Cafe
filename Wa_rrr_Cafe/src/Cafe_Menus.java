@@ -7,7 +7,7 @@ import java.util.Calendar;
 class Cafe_Menus
 {	
 	//ArrayList 자료구조 생성해서 Cafe_Select(속성 클래스) 타입의 객체를 저장할 것이다.
-	static ArrayList<Cafe_Select> vCafe_Select = new ArrayList<Cafe_Select>();	
+	static ArrayList<Cafe_Select> cafe_select = new ArrayList<Cafe_Select>();	
 
 	private static int sel;	//-- 음료 카테고리 선택값
 	private static int sel2;	//-- 1.장바구니 이동, 2.다른 메뉴 추가 선택값
@@ -151,7 +151,7 @@ class Cafe_Menus
 			 }
 		  }while(check);
 		
-		vCafe_Select.add(new Cafe_Select(sel,main,hiop,op));	
+		cafe_select.add(new Cafe_Select(sel,main,hiop,op));	
 		// 커피류는 (카테고리,메인메뉴,HOT/ICE 옵션/추가옵션) 속성을 가진 객체가 자료구조에 추가된다.
 	}
 
@@ -184,7 +184,7 @@ class Cafe_Menus
 			 }
 		  }while(check);
 
-		  vCafe_Select.add(new Cafe_Select(sel,main));
+		  cafe_select.add(new Cafe_Select(sel,main));
 		  // 논커피류는 (카테고리, 메인메뉴) 속성을 가진 객체가 자료구조에 추가된다. 
 	}
 
@@ -233,7 +233,7 @@ class Cafe_Menus
 			 }
 		  }while(check);
 
-		vCafe_Select.add(new Cafe_Select(sel,main,op));
+		cafe_select.add(new Cafe_Select(sel,main,op));
 		// 디저트류는 (카테고리,메인메뉴,추가옵션) 속성을 가진 객체가 자료구조에 추가된다.
 	
 	}

@@ -18,7 +18,7 @@ class Cafe_Control
    {
       Sales s = new Sales();//판매량 클래스 인스턴스 생성
       
-      int[] num = {s.getSespresso(),s.getSamericano(),s.getSlatte(),s.getScafeMoca(),s.getScappuccino(),s.getSvanillaLatte(),s.getScaramelM()};
+      int[] num = {Sales.getSespresso(),Sales.getSamericano(),Sales.getSlatte(),Sales.getScafeMoca(),Sales.getScappuccino(),Sales.getSvanillaLatte(),Sales.getScaramelM()};
       //배열 num에 각 커피의 판매량들을 담음
       //예를 들어 {7,6,5,4,3,2,1} 이렇게 담김
 
@@ -80,11 +80,8 @@ class Cafe_Control
 	// sold out 연산 메소드(기능: 주한별, 내용: 이채빈)
 	void sold_out()
 	{
-		// Inventory 인스턴스 생성
-		Inventory inventory = new Inventory();
-		
 		// 인벤토리의 bean 변수의 값이 0일때
-		if(inventory.getNbean()==0)
+		if(Inventory.getNbean()==0)
 		{
 			// sold out 표시
 			// 원두가 들어간 모든 음료
@@ -103,19 +100,11 @@ class Cafe_Control
 				so_menus.add(i);
 			}
 
-			//Test로 담긴 TreeSet을 출력해보자 → 확인 완료!
-			/*
-			for (String Test: so_menus)
-			{
-				System.out.println(Test);
-			}
-			*/
-			
 		}
 		
 		
 		// 인벤토리의 milk 변수의 값이 0일때 
-		if(inventory.getNmilk() == 0)
+		if(Inventory.getNmilk() == 0)
 		{
 			// sold out 표시
 			// 우유가 들어간 모든 음료
@@ -137,7 +126,7 @@ class Cafe_Control
 			
 
 		// 인벤토리의 choco 변수의 값이 0일때 
-		if(inventory.getNchoco()==0)
+		if(Inventory.getNchoco()==0)
 		{
 			
 			String[] so_choco =  {" 카페모카          "};
@@ -150,7 +139,7 @@ class Cafe_Control
 		}
 		
 
-		if(inventory.getNvanilla()==0)
+		if(Inventory.getNvanilla()==0)
 		{
 			String[] so_vanilla =  {" 바닐라시럽 추가   "};
 								  //" 카라멜마끼아또    "
@@ -163,7 +152,7 @@ class Cafe_Control
 
 	
 
-		if(inventory.getNhazel()==0)
+		if(Inventory.getNhazel()==0)
 		{
 			String[] so_hazel =  {" 헤이즐넛 시럽 추가"};
 								//" 카라멜마끼아또    "
@@ -176,7 +165,7 @@ class Cafe_Control
 		
 		
 
-		if(inventory.getNcaramel()==0)
+		if(Inventory.getNcaramel()==0)
 		{
 			String[] so_caramel =  {" 카라멜마끼아또    "
 								   ," 카라멜 시럽 추가  "};
@@ -189,8 +178,7 @@ class Cafe_Control
 		}
 		
 		
-
-		if(inventory.getNgrapefruit()==0||inventory.getNspawater()==0)
+		if(Inventory.getNgrapefruit()==0||Inventory.getNspawater()==0)
 		{
 			String[] so_grapefruit =  {" 자몽에이드        "};
 									 //" 카라멜마끼아또    "
@@ -201,9 +189,8 @@ class Cafe_Control
 			}
 		}
 		
-		
 
-		if(inventory.getNyogurtpowder()==0)
+		if(Inventory.getNyogurtpowder()==0)
 		{
 			String[] so_yogurtpowder =  {" 요거트스무디      "};
 									   //" 카라멜마끼아또    "
@@ -215,8 +202,7 @@ class Cafe_Control
 		}
 		
 
-		
-		if(inventory.getNteabag()==0)
+		if(Inventory.getNteabag()==0)
 		{
 			String[] so_teabag =  {" 히비스커스티      "};
 								// " 카라멜마끼아또    "
@@ -226,9 +212,8 @@ class Cafe_Control
 				so_menus.add(i);
 			}
 		}
-		
 
-		if(inventory.getNgoguma()==0)
+		if(Inventory.getNgoguma()==0)
 		{
 			String[] so_goguma =  {" 고구마라떼        "};
 								 //" 카라멜마끼아또    "
@@ -240,7 +225,7 @@ class Cafe_Control
 		}
 		
 
-		if(inventory.getNorange()==0)
+		if(Inventory.getNorange()==0)
 		{
 			String[] so_orange =  {" 오렌지주스        "};
 								 //" 카라멜마끼아또    "
@@ -252,7 +237,7 @@ class Cafe_Control
 		}
 		
 
-		if(inventory.getNcake()==0)
+		if(Inventory.getNcake()==0)
 		{
 			String[] so_cake =  {" 케이크            "};
 							   //" 카라멜마끼아또    "
@@ -263,7 +248,7 @@ class Cafe_Control
 			}
 		}
 		
-		if(inventory.getNbagel()==0)
+		if(Inventory.getNbagel()==0)
 		{
 			String[] so_bagel =  {" 베이글            "};
 							    //" 카라멜마끼아또    "
@@ -275,7 +260,7 @@ class Cafe_Control
 		}
 		
 
-		if(inventory.getNscone()==0)
+		if(Inventory.getNscone()==0)
 		{
 			String[] so_scone =  {" 스콘              "};
 								//" 카라멜마끼아또    "
@@ -287,7 +272,7 @@ class Cafe_Control
 		}
 
 
-		if(inventory.getNmacaron()==0)
+		if(Inventory.getNmacaron()==0)
 		{
 		
 			String[] so_macaron =  {" 마카롱            "};
@@ -300,7 +285,7 @@ class Cafe_Control
 		}
 		
 
-		if(inventory.getNstroberryjam()==0)
+		if(Inventory.getNstroberryjam()==0)
 		{
 			String[] so_stroberryjam =   {" 딸기잼            "};
 									    //" 카라멜마끼아또    "
@@ -312,7 +297,7 @@ class Cafe_Control
 		}
 	
 
-		if(inventory.getNcreamcheese()==0)
+		if(Inventory.getNcreamcheese()==0)
 		{
 			String[] so_creamcheese =  {" 크림치즈          "};
 									  //" 카라멜마끼아또    "
@@ -324,7 +309,7 @@ class Cafe_Control
 		}
 		
 
-		if(inventory.getNwhipcream()==0)
+		if(Inventory.getNwhipcream()==0)
 		{
 			String[] so_whipcream =  {" 휘핑크림 추가     "};
 									//" 카라멜마끼아또    "

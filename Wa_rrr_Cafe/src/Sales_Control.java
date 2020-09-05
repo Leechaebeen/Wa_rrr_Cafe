@@ -139,7 +139,7 @@ class Sales_Control
 	// 판매량 연산 메소드(이채빈) - 자료구조 초기화 되기전에 영수증 클래스에서 호출 (영수증 별로 판매량 누적) 
 	public void sales_Cal()
 	{
-		Iterator<Cafe_Select> it = Cafe_Menus.vCafe_Select.iterator(); //    vCafe_Select 에 저장되어있는 <Cafe_Select> 타입 객체  
+		Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
 		Cafe_Menus cafe_menus =new Cafe_Menus();
 		int all = 0; 
 		
@@ -219,7 +219,7 @@ class Sales_Control
 	{
 
 		Sales sales = new Sales();
-		Cafe_Menus.vCafe_Select.clear();
+		Cafe_Menus.cafe_select.clear();
 
 
 		  // ① 커피류

@@ -19,7 +19,7 @@ class Basket_Control
 	  System.out.println("     음료 및 디저트     |        HOT/ICE         |      옵션      |");
 	  System.out.println("-------------------------------------------------------------------");
 
-      Iterator<Cafe_Select> it = Cafe_Menus.vCafe_Select.iterator(); //    vCafe_Select 에 저장되어있는 <Cafe_Select> 타입 객체  
+      Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
 
       Pay_Control pay_control = new Pay_Control();
       pay_control.pay();

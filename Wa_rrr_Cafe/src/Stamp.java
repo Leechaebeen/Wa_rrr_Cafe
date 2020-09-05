@@ -59,7 +59,7 @@ public class Stamp
 		String yon =sc.next();	// yon(Yes or no)
 		
 		// 기존 스탬프에 잔수만큼을 더함.
-		stamp += Cafe_Menus.vCafe_Select.size();
+		stamp += Cafe_Menus.cafe_select.size();
 	
 		// 사용자가 적립에 'YES' 입력할 경우, 다음 메소드로 단계를 진행한다.(retrun문 사용)
 		if(yon.equals("Y") || yon.equals("y"))

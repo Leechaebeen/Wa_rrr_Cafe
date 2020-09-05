@@ -8,7 +8,7 @@ class I_minus extends Recipe //Recipe를 상속받음,메뉴주문시 원재료품목 빠지는 클
 	
 	public void invenMinus()
 	{
-		Iterator<Cafe_Select> it = Cafe_Menus.vCafe_Select.iterator(); //    vCafe_Select 에 저장되어있는 <Cafe_Select> 타입 객체  
+		Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
 		Cafe_Menus cafe_menus =new Cafe_Menus();
 		
 		while(it.hasNext())   // 객체가 없을 때까지 반복       

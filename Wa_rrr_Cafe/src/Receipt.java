@@ -14,11 +14,11 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 	private static int customer;	// 하루 방문 손님 수를 저장하는 변수 
 	public void setCustomer(int costomer)
 	{
-	this.customer = costomer;
+		Receipt.customer = costomer;
 	}
 	public int getCustomer()
 	{
-	return customer;
+		return customer;
 	}
 	
 	 String menu;//menu 부를 때 쓸 변수
@@ -175,7 +175,7 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 	  System.out.println("     음료 및 디저트     |        HOT/ICE         |      옵션      |");
 	  System.out.println("-------------------------------------------------------------------");
 
-      Iterator<Cafe_Select> it = Cafe_Menus.vCafe_Select.iterator(); //    vCafe_Select 에 저장되어있는 <Cafe_Select> 타입 객체  
+      Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
       Cafe_Menus cafe_menus = new Cafe_Menus();
 
       Pay_Control pay_control = new Pay_Control();
@@ -414,7 +414,7 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 
 		// 결제 금액과 자료구조 초기화시키는 메소드
 		Pay_Control.allPay = 0; 
-		Cafe_Menus.vCafe_Select.clear();
+		Cafe_Menus.cafe_select.clear();
 
 		// 손님 수 누적시키는 메소드(2명이 되면 날짜 바꾸고 0으로 초기화)
 		tc.calendar();
@@ -424,15 +424,6 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 		start.firPrint();
 		
 	}
-	
-	// Test위한 main 메소드
-	/*
-	public static void main(String[] args)
-	{
-		Receipt test = new Receipt();
-		test.random();
-	}
-	*/
 	
 	
 }

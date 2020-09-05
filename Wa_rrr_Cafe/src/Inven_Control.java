@@ -11,7 +11,6 @@ class Inven_Control
    public void totalInventory() 
    { 
       sc = new Scanner(System.in);
-	  Inventory inventory = new Inventory();
   
       Calendar ca = Calendar.getInstance();
       System.out.println("===================================================================");
@@ -24,26 +23,26 @@ class Inven_Control
 	  System.out.println("===================================================================");
       System.out.println("-------------------------------------------------------------------");
 	  System.out.println("   재고명\t          수량");
-	  System.out.printf("·  원두\t\t  %d개%n", inventory.getNbean()); //1.원두
-	  System.out.printf("·  우유\t\t  %d개%n", inventory.getNmilk()); //2.우유
-	  System.out.printf("·  초코시럽\t\t  %d개%n",inventory.getNchoco());//3.초코시럽
-	  System.out.printf("·  바닐라시럽\t\t  %d개%n",inventory.getNvanilla());//4.바닐라시럽
-	  System.out.printf("·  헤이즐넛시럽\t  %d개%n",inventory.getNhazel());//5.헤이즐넛시럽
-	  System.out.printf("·  카라멜시럽\t\t  %d개%n",inventory.getNcaramel());//6.카라멜시럽
-	  System.out.printf("·  자몽\t\t  %d개%n",inventory.getNgrapefruit());//7.자몽
-	  System.out.printf("·  탄산수\t\t  %d개%n",inventory.getNspawater());//8.탄산수
-	  System.out.printf("·  요거트파우더\t  %d개%n",inventory.getNyogurtpowder());//9.요거트파우더
-	  System.out.printf("·  티백\t\t  %d개%n",inventory.getNteabag());//10.티백
-	  System.out.printf("·  고구마\t\t  %d개%n",inventory.getNgoguma());//11.고구마
-	  System.out.printf("·  오렌지\t\t  %d개%n",inventory.getNorange());//12.오렌지
-	  System.out.printf("·  케이크\t\t  %d개%n",inventory.getNcake());//13.케이크
-	  System.out.printf("·  베이글\t\t  %d개%n",inventory.getNbagel());//14.베이글
-	  System.out.printf("·  스콘\t\t  %d개%n",inventory.getNscone());//15.스콘
-	  System.out.printf("·  마카롱\t\t  %d개%n",inventory.getNmacaron());//16.마카롱
-	  System.out.printf("·  쿠키\t\t  %d개%n",inventory.getNcookie());//17.쿠키
-	  System.out.printf("·  크림치즈\t\t  %d개%n",inventory.getNcreamcheese());//18.크림치즈
-	  System.out.printf("·  딸기잼\t\t  %d개%n",inventory.getNstroberryjam());//19.딸기잼
-	  System.out.printf("·  휘핑크림\t\t  %d개%n",inventory.getNwhipcream());//20.휘핑크림
+	  System.out.printf("·  원두\t\t  %d개%n", Inventory.getNbean()); //1.원두
+	  System.out.printf("·  우유\t\t  %d개%n", Inventory.getNmilk()); //2.우유
+	  System.out.printf("·  초코시럽\t\t  %d개%n",Inventory.getNchoco());//3.초코시럽
+	  System.out.printf("·  바닐라시럽\t\t  %d개%n",Inventory.getNvanilla());//4.바닐라시럽
+	  System.out.printf("·  헤이즐넛시럽\t  %d개%n",Inventory.getNhazel());//5.헤이즐넛시럽
+	  System.out.printf("·  카라멜시럽\t\t  %d개%n",Inventory.getNcaramel());//6.카라멜시럽
+	  System.out.printf("·  자몽\t\t  %d개%n",Inventory.getNgrapefruit());//7.자몽
+	  System.out.printf("·  탄산수\t\t  %d개%n",Inventory.getNspawater());//8.탄산수
+	  System.out.printf("·  요거트파우더\t  %d개%n",Inventory.getNyogurtpowder());//9.요거트파우더
+	  System.out.printf("·  티백\t\t  %d개%n",Inventory.getNteabag());//10.티백
+	  System.out.printf("·  고구마\t\t  %d개%n",Inventory.getNgoguma());//11.고구마
+	  System.out.printf("·  오렌지\t\t  %d개%n",Inventory.getNorange());//12.오렌지
+	  System.out.printf("·  케이크\t\t  %d개%n",Inventory.getNcake());//13.케이크
+	  System.out.printf("·  베이글\t\t  %d개%n",Inventory.getNbagel());//14.베이글
+	  System.out.printf("·  스콘\t\t  %d개%n",Inventory.getNscone());//15.스콘
+	  System.out.printf("·  마카롱\t\t  %d개%n",Inventory.getNmacaron());//16.마카롱
+	  System.out.printf("·  쿠키\t\t  %d개%n",Inventory.getNcookie());//17.쿠키
+	  System.out.printf("·  크림치즈\t\t  %d개%n",Inventory.getNcreamcheese());//18.크림치즈
+	  System.out.printf("·  딸기잼\t\t  %d개%n",Inventory.getNstroberryjam());//19.딸기잼
+	  System.out.printf("·  휘핑크림\t\t  %d개%n",Inventory.getNwhipcream());//20.휘핑크림
 	  System.out.println("-------------------------------------------------------------------");
 	  System.out.println("===================================================================");
 
@@ -71,91 +70,90 @@ class Inven_Control
 
    public  void imbakInventory() ///매진임박 재고 
    {
-      Inventory inventory = new Inventory();
       //재고가 5개 미만시 매진 임박 재고로 뜸
 	  System.out.println("===================================================================");
       System.out.println("\t\t         【매진 임박 재고 현황】");
       System.out.println("-------------------------------------------------------------------");
 	  System.out.println("   재고명\t          수량");
-      if(inventory.getNbean()<5)
+      if(Inventory.getNbean()<5)
       {
-         System.out.printf("·  원두\t\t  %d개%n",inventory.getNbean());
+         System.out.printf("·  원두\t\t  %d개%n",Inventory.getNbean());
       }
-	   if(inventory.getNmilk()<5)
+	   if(Inventory.getNmilk()<5)
       {
-         System.out.printf("·  우유\t\t  %d개%n",inventory.getNmilk());   
+         System.out.printf("·  우유\t\t  %d개%n",Inventory.getNmilk());   
       }
-	   if(inventory.getNchoco()<5)
+	   if(Inventory.getNchoco()<5)
       {
-         System.out.printf("·  초코\t\t  %d개%n",inventory.getNchoco());
+         System.out.printf("·  초코\t\t  %d개%n",Inventory.getNchoco());
       }
-	   if(inventory.getNvanilla()<5)
+	   if(Inventory.getNvanilla()<5)
       {
-         System.out.printf("·  바닐라시럽\t\t  %d개%n",inventory.getNvanilla());
+         System.out.printf("·  바닐라시럽\t\t  %d개%n",Inventory.getNvanilla());
       }
-	   if(inventory.getNhazel()<5)
+	   if(Inventory.getNhazel()<5)
       {
-         System.out.printf("·  헤이즐넛시럽\t  %d개%n",inventory.getNhazel());
+         System.out.printf("·  헤이즐넛시럽\t  %d개%n",Inventory.getNhazel());
       }
-	   if(inventory.getNcaramel()<5)
+	   if(Inventory.getNcaramel()<5)
       {
-         System.out.printf("·  카라멜시럽\t\t  %d개%n",inventory.getNcaramel());
+         System.out.printf("·  카라멜시럽\t\t  %d개%n",Inventory.getNcaramel());
       }
-	   if(inventory.getNgrapefruit()<5)
+	   if(Inventory.getNgrapefruit()<5)
       {
-         System.out.printf("·  자몽\t\t  %d개%n",inventory.getNgrapefruit());
+         System.out.printf("·  자몽\t\t  %d개%n",Inventory.getNgrapefruit());
       }
-	   if(inventory.getNspawater()<5)
+	   if(Inventory.getNspawater()<5)
       {
-         System.out.printf("·  탄산수\t\t  %d개%n",inventory.getNspawater());
+         System.out.printf("·  탄산수\t\t  %d개%n",Inventory.getNspawater());
       }
-	   if(inventory.getNyogurtpowder()<5)
+	   if(Inventory.getNyogurtpowder()<5)
       {
-         System.out.printf("·  요거트파우더\t  %d개%n",inventory.getNyogurtpowder());
+         System.out.printf("·  요거트파우더\t  %d개%n",Inventory.getNyogurtpowder());
       }
-	   if(inventory.getNteabag()<5)
+	   if(Inventory.getNteabag()<5)
       {
-         System.out.printf("·  티백\t\t  %d개%n",inventory.getNteabag());
+         System.out.printf("·  티백\t\t  %d개%n",Inventory.getNteabag());
       }
-	   if(inventory.getNgoguma()<5)
+	   if(Inventory.getNgoguma()<5)
       {
-         System.out.printf("·  고구마\t\t  %d개%n",inventory.getNgoguma());
+         System.out.printf("·  고구마\t\t  %d개%n",Inventory.getNgoguma());
       }
-	   if(inventory.getNorange()<5)
+	   if(Inventory.getNorange()<5)
       {
-         System.out.printf("·  오렌지\t\t  %d개%n",inventory.getNorange());
+         System.out.printf("·  오렌지\t\t  %d개%n",Inventory.getNorange());
       }
-	   if(inventory.getNcake()<5)
+	   if(Inventory.getNcake()<5)
       {
-         System.out.printf("·  케이크\t\t  %d개%n",inventory.getNcake());
+         System.out.printf("·  케이크\t\t  %d개%n",Inventory.getNcake());
       }
-	   if(inventory.getNbagel()<5)
+	   if(Inventory.getNbagel()<5)
       {
-         System.out.printf("·  베이글\t\t  %d개%n",inventory.getNbagel());   
+         System.out.printf("·  베이글\t\t  %d개%n",Inventory.getNbagel());   
       }
-	   if(inventory.getNscone()<5)
+	   if(Inventory.getNscone()<5)
       {
-         System.out.printf("·  스콘\t\t  %d개%n",inventory.getNscone());   
+         System.out.printf("·  스콘\t\t  %d개%n",Inventory.getNscone());   
       }
-	   if(inventory.getNmacaron()<5)
+	   if(Inventory.getNmacaron()<5)
       {
-         System.out.printf("·  마카롱\t\t  %d개%n",inventory.getNmacaron());   
+         System.out.printf("·  마카롱\t\t  %d개%n",Inventory.getNmacaron());   
       }
-	   if(inventory.getNcookie()<5)
+	   if(Inventory.getNcookie()<5)
       {
-         System.out.printf("·  쿠키\t\t  %d개%n",inventory.getNcookie());   
+         System.out.printf("·  쿠키\t\t  %d개%n",Inventory.getNcookie());   
       }
-	   if(inventory.getNcreamcheese()<5)
+	   if(Inventory.getNcreamcheese()<5)
       {
-         System.out.printf("·  크림치즈\t\t  %d개%n",inventory.getNcreamcheese());   
+         System.out.printf("·  크림치즈\t\t  %d개%n",Inventory.getNcreamcheese());   
       }
-	   if(inventory.getNstroberryjam()<5)
+	   if(Inventory.getNstroberryjam()<5)
       {
-         System.out.printf("·  딸기잼\t\t  %d개%n",inventory.getNstroberryjam());   
+         System.out.printf("·  딸기잼\t\t  %d개%n",Inventory.getNstroberryjam());   
       }
-	   if(inventory.getNwhipcream()<5)
+	   if(Inventory.getNwhipcream()<5)
       {
-         System.out.printf("·  휘핑크림\t\t  %d개%n",inventory.getNwhipcream());  
+         System.out.printf("·  휘핑크림\t\t  %d개%n",Inventory.getNwhipcream());  
       }
 	  System.out.println("-------------------------------------------------------------------");
 	  System.out.println("===================================================================");
