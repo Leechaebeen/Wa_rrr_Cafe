@@ -1,6 +1,4 @@
 
-import java.util.Scanner;
-
 import java.util.*;
 
 //판매량 및 매출액 기능 클래스(이채빈, 주한별, 최호석)
@@ -17,7 +15,6 @@ class Sales_Control
 	   Money m = new Money();
 	   Money_Control mc = new Money_Control();
 	   Change c = new Change();
-	   Sales s = new Sales(); //판매량 인스턴스 생성
 	   
 	//일별 매출 출력 메소드(최호석)
 	  public void sales_day_Lookup() 
@@ -34,27 +31,27 @@ class Sales_Control
 		System.out.printf("%61d-%d-%d\n",year,month, date  + TestCalendar.datePlus);
        System.out.println("-------------------------------------------------------------------");
        System.out.println("   Coffee류\t       판매량");
-        System.out.printf("·  에스프레소\t\t  %d잔\n",s.getSespresso());
-        System.out.printf("·  아메리카노\t\t  %d잔\n",s.getSamericano());
-        System.out.printf("·  카페라떼\t\t  %d잔\n",s.getSlatte());
-        System.out.printf("·  카푸치노\t\t  %d잔\n",s.getScappuccino());
-        System.out.printf("·  카페모카\t\t  %d잔\n",s.getScafeMoca());
-        System.out.printf("·  바닐라라떼\t\t  %d잔\n",s.getSvanillaLatte());
-        System.out.printf("·  카라멜마끼아또\t  %d잔\n",s.getScaramelM());
+        System.out.printf("·  에스프레소\t\t  %d잔\n",Sales.getSespresso());
+        System.out.printf("·  아메리카노\t\t  %d잔\n",Sales.getSamericano());
+        System.out.printf("·  카페라떼\t\t  %d잔\n",Sales.getSlatte());
+        System.out.printf("·  카푸치노\t\t  %d잔\n",Sales.getScappuccino());
+        System.out.printf("·  카페모카\t\t  %d잔\n",Sales.getScafeMoca());
+        System.out.printf("·  바닐라라떼\t\t  %d잔\n",Sales.getSvanillaLatte());
+        System.out.printf("·  카라멜마끼아또\t  %d잔\n",Sales.getScaramelM());
        System.out.println();
        System.out.println("   NonCoffee류");
-        System.out.printf("·  자몽에이드\t\t  %d잔\n",s.getSjamongAde());
-        System.out.printf("·  요거트스무디\t  %d잔\n",s.getSyogurt());
-        System.out.printf("·  히비스커스티\t  %d잔\n",s.getStea());
-        System.out.printf("·  고구마라떼\t\t  %d잔\n",s.getSgogumaLatte());
-        System.out.printf("·  오렌지쥬스\t\t  %d잔\n",s.getSorangeJuice());
+        System.out.printf("·  자몽에이드\t\t  %d잔\n",Sales.getSjamongAde());
+        System.out.printf("·  요거트스무디\t  %d잔\n",Sales.getSyogurt());
+        System.out.printf("·  히비스커스티\t  %d잔\n",Sales.getStea());
+        System.out.printf("·  고구마라떼\t\t  %d잔\n",Sales.getSgogumaLatte());
+        System.out.printf("·  오렌지쥬스\t\t  %d잔\n",Sales.getSorangeJuice());
        System.out.println();
        System.out.println("   Dessert류");
-        System.out.printf("·  케이크\t\t  %d개\n",s.getScake());
-        System.out.printf("·  마카롱\t\t  %d개\n",s.getSmacaron());
-        System.out.printf("·  스콘\t\t  %d개\n",s.getSscone());
-        System.out.printf("·  베이글\t\t  %d개\n",s.getSbagel());
-        System.out.printf("·  쿠키\t\t  %d개\n",s.getScookie());
+        System.out.printf("·  케이크\t\t  %d개\n",Sales.getScake());
+        System.out.printf("·  마카롱\t\t  %d개\n",Sales.getSmacaron());
+        System.out.printf("·  스콘\t\t  %d개\n",Sales.getSscone());
+        System.out.printf("·  베이글\t\t  %d개\n",Sales.getSbagel());
+        System.out.printf("·  쿠키\t\t  %d개\n",Sales.getScookie());
        System.out.println("-------------------------------------------------------------------");
         System.out.println("===================================================================");
        System.out.println("\t\t\t   【매 출 현 황】");
@@ -87,27 +84,27 @@ class Sales_Control
 		System.out.printf(" %39d-%d-%d 부터 ~ %d-%d-%d 까지\n",year,month,date,year,month,date+TestCalendar.datePlus);
         System.out.println("-------------------------------------------------------------------");
         System.out.println("   Coffee류\t       판매량");
-        System.out.printf("·  에스프레소\t\t  %d잔\n",s.saveEspresso);
-        System.out.printf("·  아메리카노\t\t  %d잔\n",s.saveAmericano);
-        System.out.printf("·  카페라떼\t\t  %d잔\n",s.saveLatte);
-        System.out.printf("·  카푸치노\t\t  %d잔\n",s.saveCappuccino);
-        System.out.printf("·  카페모카\t\t  %d잔\n",s.saveCafeMoca);
-        System.out.printf("·  바닐라라떼\t\t  %d잔\n",s.saveVanillaLatte);
-        System.out.printf("·  카라멜마끼아또\t  %d잔\n",s.saveCaramelM);
+        System.out.printf("·  에스프레소\t\t  %d잔\n",Sales.saveEspresso);
+        System.out.printf("·  아메리카노\t\t  %d잔\n",Sales.saveAmericano);
+        System.out.printf("·  카페라떼\t\t  %d잔\n",Sales.saveLatte);
+        System.out.printf("·  카푸치노\t\t  %d잔\n",Sales.saveCappuccino);
+        System.out.printf("·  카페모카\t\t  %d잔\n",Sales.saveCafeMoca);
+        System.out.printf("·  바닐라라떼\t\t  %d잔\n",Sales.saveVanillaLatte);
+        System.out.printf("·  카라멜마끼아또\t  %d잔\n",Sales.saveCaramelM);
        System.out.println();
        System.out.println("   NonCoffee류");
-        System.out.printf("·  자몽에이드\t\t  %d잔\n",s.saveJamongAde);
-        System.out.printf("·  요거트스무디\t  %d잔\n",s.saveYogurt);
-        System.out.printf("·  히비스커스티\t  %d잔\n",s.saveTea);
-        System.out.printf("·  고구마라떼\t\t  %d잔\n",s.saveGogumaLatte);
-        System.out.printf("·  오렌지쥬스\t\t  %d잔\n",s.saveOrangeJuice);
+        System.out.printf("·  자몽에이드\t\t  %d잔\n",Sales.saveJamongAde);
+        System.out.printf("·  요거트스무디\t  %d잔\n",Sales.saveYogurt);
+        System.out.printf("·  히비스커스티\t  %d잔\n",Sales.saveTea);
+        System.out.printf("·  고구마라떼\t\t  %d잔\n",Sales.saveGogumaLatte);
+        System.out.printf("·  오렌지쥬스\t\t  %d잔\n",Sales.saveOrangeJuice);
        System.out.println();
        System.out.println("   Dessert류");
-        System.out.printf("·  케이크\t\t  %d개\n",s.saveCake);
-        System.out.printf("·  마카롱\t\t  %d개\n",s.saveMacaron);
-        System.out.printf("·  스콘\t\t  %d개\n",s.saveScone);
-        System.out.printf("·  베이글\t\t  %d개\n",s.saveBagel);
-        System.out.printf("·  쿠키\t\t  %d개\n",s.saveCookie);
+        System.out.printf("·  케이크\t\t  %d개\n",Sales.saveCake);
+        System.out.printf("·  마카롱\t\t  %d개\n",Sales.saveMacaron);
+        System.out.printf("·  스콘\t\t  %d개\n",Sales.saveScone);
+        System.out.printf("·  베이글\t\t  %d개\n",Sales.saveBagel);
+        System.out.printf("·  쿠키\t\t  %d개\n",Sales.saveCookie);
        System.out.println("-------------------------------------------------------------------");
         System.out.println("===================================================================");
        System.out.println("\t\t\t   【매 출 현 황】");
@@ -140,63 +137,60 @@ class Sales_Control
 	public void sales_Cal()
 	{
 		Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
-		Cafe_Menus cafe_menus =new Cafe_Menus();
-		int all = 0; 
 		
 		while(it.hasNext())   // 객체가 없을 때까지 반복       
 		{
 			Object obj = it.next();   // <Cafe_Select> 타입 객체를 가져온다
 			 Cafe_Select cafe_select = (Cafe_Select)obj;
-			 Sales sales = new Sales();
 				 
 				if(cafe_select.getCategory() == 1) //카테고리값이 1이라면...커피
 				{
 
 					switch(cafe_select.getMain()) 
 					{
-						 case 1 : sales.setSespresso(sales.getSespresso()+1); break;
+						 case 1 : Sales.setSespresso(Sales.getSespresso()+1); break;
 								 
-						 case 2 : sales.setSamericano(sales.getSamericano()+1); break;
+						 case 2 : Sales.setSamericano(Sales.getSamericano()+1); break;
 											  
-						 case 3 : sales.setSlatte(sales.getSlatte()+1); break;
+						 case 3 : Sales.setSlatte(Sales.getSlatte()+1); break;
 							
-						 case 4 : sales.setScafeMoca(sales.getScafeMoca()+1);break;
+						 case 4 : Sales.setScafeMoca(Sales.getScafeMoca()+1);break;
 								
-						 case 5 : sales.setScappuccino(sales.getScappuccino()+1);break;
+						 case 5 : Sales.setScappuccino(Sales.getScappuccino()+1);break;
 
-						 case 6 : sales.setSvanillaLatte(sales.getSvanillaLatte()+1);break; 
+						 case 6 : Sales.setSvanillaLatte(Sales.getSvanillaLatte()+1);break; 
 
-						 case 7 : sales.setScaramelM(sales.getScaramelM()+1);break;
+						 case 7 : Sales.setScaramelM(Sales.getScaramelM()+1);break;
 					}
 					
 				}else if(cafe_select.getCategory() == 2) //2번에는 논커피
 				{
 					switch(cafe_select.getMain())
 					{
-						case 1 : sales.setSjamongAde(sales.getSjamongAde()+1);break; 
+						case 1 : Sales.setSjamongAde(Sales.getSjamongAde()+1);break; 
 									
-						case 2 : sales.setSyogurt(sales.getSyogurt()+1);break; 
+						case 2 : Sales.setSyogurt(Sales.getSyogurt()+1);break; 
 			 
-						case 3 : sales.setStea(sales.getStea()+1);break;  
+						case 3 : Sales.setStea(Sales.getStea()+1);break;  
  
-					    case 4 : sales.setSorangeJuice(sales.getSorangeJuice()+1); break;
+					    case 4 : Sales.setSorangeJuice(Sales.getSorangeJuice()+1); break;
 					
-					    case 5 : sales.setSgogumaLatte(sales.getSgogumaLatte()+1); break;
+					    case 5 : Sales.setSgogumaLatte(Sales.getSgogumaLatte()+1); break;
 					}
 				}else if(cafe_select.getCategory() == 3)//3번에는 디저트
 				{
 					switch(cafe_select.getMain())
 					{
 						
-						case 1 : sales.setScake(sales.getScake()+1); break;
+						case 1 : Sales.setScake(Sales.getScake()+1); break;
 								
-					    case 2 : sales.setSbagel(sales.getSbagel()+1); break;
+					    case 2 : Sales.setSbagel(Sales.getSbagel()+1); break;
 										  
-					    case 3 : sales.setSscone(sales.getSscone()+1); break;
+					    case 3 : Sales.setSscone(Sales.getSscone()+1); break;
 											  
-					    case 4 : sales.setSmacaron(sales.getSmacaron()+1); break;
+					    case 4 : Sales.setSmacaron(Sales.getSmacaron()+1); break;
 										
-					    case 5 : sales.setScookie(sales.getScookie()+1); break;
+					    case 5 : Sales.setScookie(Sales.getScookie()+1); break;
 								
 					}
 				
@@ -217,62 +211,59 @@ class Sales_Control
 	// 총 판매량 누적 연산 메소드(주한별)	
 	public void saveSales()
 	{
-
-		Sales sales = new Sales();
 		Cafe_Menus.cafe_select.clear();
 
-
 		  // ① 커피류
-		all = sales.getSespresso();		// 임시변수 = 일별 판매량 										
+		all = Sales.getSespresso();		// 임시변수 = 일별 판매량 										
 		sEspresso += all;				// 누적 변수 += 일별 판매량 
-		sales.saveEspresso = sEspresso;
+		Sales.saveEspresso = sEspresso;
 		
-		all = sales.getSamericano();   
+		all = Sales.getSamericano();   
 		sAmericano += all;
-		sales.saveAmericano = sAmericano;
+		Sales.saveAmericano = sAmericano;
 		
-		all = sales.getSlatte();
+		all = Sales.getSlatte();
 		sLatte += all;
-		sales.saveLatte = sLatte;
+		Sales.saveLatte = sLatte;
 		
-		all = sales.getScafeMoca();
+		all = Sales.getScafeMoca();
 		sCafeMoca += all;
-		sales.saveCafeMoca = sCafeMoca;
+		Sales.saveCafeMoca = sCafeMoca;
 		
-		all = sales.getScappuccino();
+		all = Sales.getScappuccino();
 		sCappuccino += all;
-		sales.saveCappuccino =sCappuccino;
+		Sales.saveCappuccino =sCappuccino;
 		
-		all = sales.getSvanillaLatte();
+		all = Sales.getSvanillaLatte();
 		sVanillaLatte += all;
-		sales.saveVanillaLatte = sVanillaLatte;
+		Sales.saveVanillaLatte = sVanillaLatte;
 		
-		all = sales.getScaramelM();
+		all = Sales.getScaramelM();
 		sCaramelM += all; 
-		sales.saveCaramelM+=sCaramelM;
+		Sales.saveCaramelM+=sCaramelM;
 		   
 		   // ② 논커피류
-		sJamongAde=sales.getSjamongAde();
-		sales.saveJamongAde += sJamongAde;
+		sJamongAde=Sales.getSjamongAde();
+		Sales.saveJamongAde += sJamongAde;
 		
-		sYogurt=sales.getSyogurt();
-		sales.saveTea+=sYogurt;
+		sYogurt=Sales.getSyogurt();
+		Sales.saveTea+=sYogurt;
 		
-		sOrangeJuice=sales.getSorangeJuice();
-		sales.saveOrangeJuice+=sOrangeJuice;
+		sOrangeJuice=Sales.getSorangeJuice();
+		Sales.saveOrangeJuice+=sOrangeJuice;
 		
-		sGogumaLatte=sales.getSgogumaLatte();
-		sales.saveGogumaLatte+=sGogumaLatte;
+		sGogumaLatte=Sales.getSgogumaLatte();
+		Sales.saveGogumaLatte+=sGogumaLatte;
 		   
 		   // ③ 디저트류
-		sCake =sales.getScake();
-		sales.saveCake+=sCake;
+		sCake =Sales.getScake();
+		Sales.saveCake+=sCake;
 		
-		sBagel=sales.getSbagel();
-		sales.saveScone+=sScone;
+		sBagel=Sales.getSbagel();
+		Sales.saveScone+=sScone;
 		
-		sMacaron=sales.getSmacaron();
-		sales.saveCookie+=sMacaron;
+		sMacaron=Sales.getSmacaron();
+		Sales.saveCookie+=sMacaron;
 		
 	}
 

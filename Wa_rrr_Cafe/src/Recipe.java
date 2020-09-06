@@ -1,9 +1,6 @@
 // 재고 줄어들게 하는 기능 클래스(주한별)
 public class Recipe
 {
-	// Inventory 인스턴스 생성
-	Inventory inventory = new Inventory();
-	
 	// ① 커피류 레시피 메소드
 	
 	// 에프스레소 레시피 메소드 -원두
@@ -11,8 +8,8 @@ public class Recipe
 	{ 
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		// Test (inventory 클래스에서 Bean이 하나 줄었는지)
 		//System.out.println(inventory.getBean());
 		//--==>> 2 (OK)
@@ -27,8 +24,8 @@ public class Recipe
 	{ 
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		// Test (inventory 클래스에서 Bean이 하나 줄었는지)
 		//System.out.println(inventory.getBean());
 		//--==>> 2 (OK)
@@ -44,12 +41,12 @@ public class Recipe
 	{
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		
 		// 우유 1개 inventory에서 빼기
-		int inven_milk =inventory.getNmilk();
-		inventory.setNmilk(inven_milk-=1);
+		int inven_milk =Inventory.getNmilk();
+		Inventory.setNmilk(inven_milk-=1);
 		
 
 		
@@ -60,16 +57,16 @@ public class Recipe
 	{
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		
 		// 우유 1개 inventory에서 빼기
-		int inven_milk =inventory.getNmilk();
-		inventory.setNmilk(inven_milk-=1);
+		int inven_milk =Inventory.getNmilk();
+		Inventory.setNmilk(inven_milk-=1);
 		
 		// 초코시럽 1개 inventory에서 빼기
-		int inven_choco =inventory.getNchoco();
-		inventory.setNchoco(inven_choco-=1);
+		int inven_choco =Inventory.getNchoco();
+		Inventory.setNchoco(inven_choco-=1);
 		
 	}// cafeMoca_recipe() 완료
 	
@@ -78,12 +75,12 @@ public class Recipe
 	{
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		
 		// 우유 1개 inventory에서 빼기
-		int inven_milk =inventory.getNmilk();
-		inventory.setNmilk(inven_milk-=1);
+		int inven_milk =Inventory.getNmilk();
+		Inventory.setNmilk(inven_milk-=1);
 
 	}
 	
@@ -92,16 +89,16 @@ public class Recipe
 	{
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		
 		// 우유 1개 inventory에서 빼기
-		int inven_milk =inventory.getNmilk();
-		inventory.setNmilk(inven_milk-=1);
+		int inven_milk =Inventory.getNmilk();
+		Inventory.setNmilk(inven_milk-=1);
 		
 		// 바닐라 1개 inventory에서 빼기
-		int inven_vanilla =inventory.getNvanilla();
-		inventory.setNvanilla(inven_vanilla-=1);
+		int inven_vanilla =Inventory.getNvanilla();
+		Inventory.setNvanilla(inven_vanilla-=1);
 
 	}// vanillaLatte_recipe() 완료
 	
@@ -110,16 +107,16 @@ public class Recipe
 	{
 		
 		// 커피원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		
 		// 우유 1개 inventory에서 빼기
-		int inven_milk =inventory.getNmilk();
-		inventory.setNmilk(inven_milk-=1);
+		int inven_milk =Inventory.getNmilk();
+		Inventory.setNmilk(inven_milk-=1);
 		
 		// 카라멜 시럽 1개 inventory에서 빼기
-		int inven_caramel =inventory.getNcaramel();
-		inventory.setNcaramel(inven_caramel-=1);
+		int inven_caramel =Inventory.getNcaramel();
+		Inventory.setNcaramel(inven_caramel-=1);
 
 	}
 	
@@ -130,12 +127,12 @@ public class Recipe
 	{
 		
 		// 자몽 1개 inventory에서 빼기
-		int inven_grapefruit=inventory.getNgrapefruit();
-		inventory.setNgrapefruit(inven_grapefruit-=1);
+		int inven_grapefruit=Inventory.getNgrapefruit();
+		Inventory.setNgrapefruit(inven_grapefruit-=1);
 		
 		// 탄산수 1개 inventory에서 빼기
-		int inven_spawater =inventory.getNspawater();
-		inventory.setNspawater(inven_spawater-=1);
+		int inven_spawater =Inventory.getNspawater();
+		Inventory.setNspawater(inven_spawater-=1);
 		
 
 	} // jamongAde_recipe() 완료
@@ -145,8 +142,8 @@ public class Recipe
 	{
 		
 		// 요거트 1개 inventory에서 빼기
-		int inven_yogurtpowder=inventory.getNyogurtpowder();
-		inventory.setNyogurtpowder(inven_yogurtpowder-=1);
+		int inven_yogurtpowder=Inventory.getNyogurtpowder();
+		Inventory.setNyogurtpowder(inven_yogurtpowder-=1);
 		
 		
 	}
@@ -156,8 +153,8 @@ public class Recipe
 	{
 		
 		// 티 1개 inventory에서 빼기
-		int inven_teabag=inventory.getNteabag();
-		inventory.setNteabag(inven_teabag-=1);
+		int inven_teabag=Inventory.getNteabag();
+		Inventory.setNteabag(inven_teabag-=1);
 		
 		
 	}
@@ -167,8 +164,8 @@ public class Recipe
 	{
 		
 		// 오랜지 1개 inventory에서 빼기
-		int inven_orange=inventory.getNorange();
-		inventory.setNorange(inven_orange-=1);
+		int inven_orange=Inventory.getNorange();
+		Inventory.setNorange(inven_orange-=1);
 		
 		
 	}
@@ -177,12 +174,12 @@ public class Recipe
 	{
 		
 		// 고구마 1개 inventory에서 빼기
-		int inven_goguma=inventory.getNgoguma();
-		inventory.setGoguma(inven_goguma-=1);
+		int inven_goguma=Inventory.getNgoguma();
+		Inventory.setNgoguma(inven_goguma-=1);
 		
 		// 우유 1개 inventory에서 빼기
-		int inven_milk =inventory.getNmilk();
-		inventory.setNmilk(inven_milk-=1);
+		int inven_milk =Inventory.getNmilk();
+		Inventory.setNmilk(inven_milk-=1);
 		
 	}
 	
@@ -193,8 +190,8 @@ public class Recipe
 	{
 		
 		// 케이크 1개 inventory에서 빼기
-		int inven_cake=inventory.getNcake();
-		inventory.setNcake(inven_cake-=1);
+		int inven_cake=Inventory.getNcake();
+		Inventory.setNcake(inven_cake-=1);
 
 		
 	}
@@ -204,8 +201,8 @@ public class Recipe
 	{
 		
 		// 베이글 1개 inventory에서 빼기
-		int inven_bagel=inventory.getNbagel();
-		inventory.setNbagel(inven_bagel-=1);
+		int inven_bagel=Inventory.getNbagel();
+		Inventory.setNbagel(inven_bagel-=1);
 
 		
 	}
@@ -214,8 +211,8 @@ public class Recipe
 	{
 		
 		// 스콘 1개 inventory에서 빼기
-		int inven_scone=inventory.getNscone();
-		inventory.setNscone(inven_scone-=1);
+		int inven_scone=Inventory.getNscone();
+		Inventory.setNscone(inven_scone-=1);
 		
 	}
 	
@@ -224,8 +221,8 @@ public class Recipe
 	{
 		
 		// 마카롱 1개 inventory에서 빼기
-		int inven_macaron=inventory.getNmacaron();
-		inventory.setNmacaron(inven_macaron-=1);
+		int inven_macaron=Inventory.getNmacaron();
+		Inventory.setNmacaron(inven_macaron-=1);
 		
 	}
 	
@@ -234,8 +231,8 @@ public class Recipe
 	{
 		
 		// 쿠키 1개 inventory에서 빼기
-		int inven_cookie=inventory.getNcookie();
-		inventory.setNcookie(inven_cookie-=1);
+		int inven_cookie=Inventory.getNcookie();
+		Inventory.setNcookie(inven_cookie-=1);
 		
 		
 	}
@@ -247,8 +244,8 @@ public class Recipe
 	{
 		
 		// 원두 1개 inventory에서 빼기
-		int inven_bean=inventory.getNbean();
-		inventory.setNbean(inven_bean-=1);
+		int inven_bean=Inventory.getNbean();
+		Inventory.setNbean(inven_bean-=1);
 		
 		
 	}
@@ -258,8 +255,8 @@ public class Recipe
 	{
 		
 		// 바닐라 1개 inventory에서 빼기
-		int inven_vanilla =inventory.getNvanilla();
-		inventory.setNvanilla(inven_vanilla-=1);
+		int inven_vanilla =Inventory.getNvanilla();
+		Inventory.setNvanilla(inven_vanilla-=1);
 		
 	}
 	
@@ -268,8 +265,8 @@ public class Recipe
 	{
 		
 		// 초코시럽 1개 inventory에서 빼기
-		int inven_choco =inventory.getNchoco();
-		inventory.setNchoco(inven_choco-=1);
+		int inven_choco =Inventory.getNchoco();
+		Inventory.setNchoco(inven_choco-=1);
 		
 		
 	}
@@ -279,8 +276,8 @@ public class Recipe
 	{
 		
 		// 헤이즐넛시럽 1개 inventory에서 빼기
-		int inven_hazel =inventory.getNhazel();
-		inventory.setNhazel(inven_hazel-=1);
+		int inven_hazel =Inventory.getNhazel();
+		Inventory.setNhazel(inven_hazel-=1);
 		
 		
 	}
@@ -290,8 +287,8 @@ public class Recipe
 	{
 		
 		// 휘핑 1개 inventory에서 빼기
-		int inven_whipcream=inventory.getNwhipcream();
-		inventory.setNwhipcream(inven_whipcream-=1);
+		int inven_whipcream=Inventory.getNwhipcream();
+		Inventory.setNwhipcream(inven_whipcream-=1);
 		
 		
 	}
@@ -301,8 +298,8 @@ public class Recipe
 	{
 		
 		// 크림치즈 1개 inventory에서 빼기
-		int inven_creamcheese=inventory.getNcreamcheese();
-		inventory.setNcreamcheese(inven_creamcheese-=1);
+		int inven_creamcheese=Inventory.getNcreamcheese();
+		Inventory.setNcreamcheese(inven_creamcheese-=1);
 		
 		
 	}
@@ -312,8 +309,8 @@ public class Recipe
 	{
 		
 		// 딸기잼 1개 inventory에서 빼기
-		int inven_stroberryjam=inventory.getNstroberryjam();
-		inventory.setNstroberryjam(inven_stroberryjam-=1);
+		int inven_stroberryjam=Inventory.getNstroberryjam();
+		Inventory.setNstroberryjam(inven_stroberryjam-=1);
 		
 		
 	}

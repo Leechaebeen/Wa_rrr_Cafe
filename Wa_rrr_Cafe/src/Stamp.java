@@ -188,17 +188,6 @@ public class Stamp
 	}//stamp_print() 메소드 완료
 	
 	
-	// Test를 위한 main 함수
-	
-	/*
-	public static void main(String[] args)
-	{
-		Stamp st = new Stamp();
-		st.saveSelect();
-
-	}
-	*/
-	
 }
 
 

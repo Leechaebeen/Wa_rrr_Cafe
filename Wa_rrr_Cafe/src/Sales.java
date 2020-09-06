@@ -54,107 +54,174 @@ class Sales
 
    //게터세터 
 
-   public static int getSespresso() {
-         return Sespresso;
-      }
-      public static void setSespresso(int sespresso) {
-         Sespresso = sespresso;
-      }
-      public static int getSamericano() {
-         return Samericano;
-      }
-      public static void setSamericano(int samericano) {
-         Samericano = samericano;
-      }
-      public static int getSlatte() {
-         return Slatte;
-      }
-      public static void setSlatte(int slatte) {
-         Slatte = slatte;
-      }
-      public static int getScafeMoca() {
-         return ScafeMoca;
-      }
-      public static void setScafeMoca(int scafeMoca) {
-         ScafeMoca = scafeMoca;
-      }
-      public static int getScappuccino() {
-         return Scappuccino;
-      }
-      public static void setScappuccino(int scappuccino) {
-         Scappuccino = scappuccino;
-      }
-      public static int getSvanillaLatte() {
-         return SvanillaLatte;
-      }
-      public static void setSvanillaLatte(int svanillaLatte) {
-         SvanillaLatte = svanillaLatte;
-      }
-      public static int getScaramelM() {
-         return ScaramelM;
-      }
-      public static void setScaramelM(int scaramelM) {
-         ScaramelM = scaramelM;
-      }
-      public static int getSjamongAde() {
-         return SjamongAde;
-      }
-      public static void setSjamongAde(int sjamongAde) {
-         SjamongAde = sjamongAde;
-      }
-      public static int getSyogurt() {
-         return Syogurt;
-      }
-      public static void setSyogurt(int syogurt) {
-         Syogurt = syogurt;
-      }
-      public static int getStea() {
-         return Stea;
-      }
-      public static void setStea(int stea) {
-         Stea = stea;
-      }
-      public static int getSorangeJuice() {
-         return SorangeJuice;
-      }
-      public static void setSorangeJuice(int sorangeJuice) {
-         SorangeJuice = sorangeJuice;
-      }
-      public static int getSgogumaLatte() {
-         return SgogumaLatte;
-      }
-      public static void setSgogumaLatte(int sgogumaLatte) {
-         SgogumaLatte = sgogumaLatte;
-      }
-      public static int getScake() {
-         return Scake;
-      }
-      public static void setScake(int scake) {
-         Scake = scake;
-      }
-      public static int getSbagel() {
-         return Sbagel;
-      }
-      public static void setSbagel(int sbagel) {
-         Sbagel = sbagel;
-      }
-      public static int getSscone() {
-         return Sscone;
-      }
-      public static void setSscone(int sscone) {
-         Sscone = sscone;
-      }
-      public static int getSmacaron() {
-         return Smacaron;
-      }
-      public static void setSmacaron(int smacaron) {
-         Smacaron = smacaron;
-      }
-      public static int getScookie() {
-         return Scookie;
-      }
-      public static void setScookie(int scookie) {
-         Scookie = scookie;
-      }
+	public static int getSespresso()
+	{
+		return Sespresso;
+	}
+
+	public static void setSespresso(int sespresso)
+	{
+		Sespresso = sespresso;
+	}
+
+	public static int getSamericano()
+	{
+		return Samericano;
+	}
+
+	public static void setSamericano(int samericano)
+	{
+		Samericano = samericano;
+	}
+
+	public static int getSlatte()
+	{
+		return Slatte;
+	}
+
+	public static void setSlatte(int slatte)
+	{
+		Slatte = slatte;
+	}
+
+	public static int getScafeMoca()
+	{
+		return ScafeMoca;
+	}
+
+	public static void setScafeMoca(int scafeMoca)
+	{
+		ScafeMoca = scafeMoca;
+	}
+
+	public static int getScappuccino()
+	{
+		return Scappuccino;
+	}
+
+	public static void setScappuccino(int scappuccino)
+	{
+		Scappuccino = scappuccino;
+	}
+
+	public static int getSvanillaLatte()
+	{
+		return SvanillaLatte;
+	}
+
+	public static void setSvanillaLatte(int svanillaLatte)
+	{
+		SvanillaLatte = svanillaLatte;
+	}
+
+	public static int getScaramelM()
+	{
+		return ScaramelM;
+	}
+
+	public static void setScaramelM(int scaramelM)
+	{
+		ScaramelM = scaramelM;
+	}
+
+	public static int getSjamongAde()
+	{
+		return SjamongAde;
+	}
+
+	public static void setSjamongAde(int sjamongAde)
+	{
+		SjamongAde = sjamongAde;
+	}
+
+	public static int getSyogurt()
+	{
+		return Syogurt;
+	}
+
+	public static void setSyogurt(int syogurt)
+	{
+		Syogurt = syogurt;
+	}
+
+	public static int getStea()
+	{
+		return Stea;
+	}
+
+	public static void setStea(int stea)
+	{
+		Stea = stea;
+	}
+
+	public static int getSorangeJuice()
+	{
+		return SorangeJuice;
+	}
+
+	public static void setSorangeJuice(int sorangeJuice)
+	{
+		SorangeJuice = sorangeJuice;
+	}
+
+	public static int getSgogumaLatte()
+	{
+		return SgogumaLatte;
+	}
+
+	public static void setSgogumaLatte(int sgogumaLatte)
+	{
+		SgogumaLatte = sgogumaLatte;
+	}
+
+	public static int getScake()
+	{
+		return Scake;
+	}
+
+	public static void setScake(int scake)
+	{
+		Scake = scake;
+	}
+
+	public static int getSbagel()
+	{
+		return Sbagel;
+	}
+
+	public static void setSbagel(int sbagel)
+	{
+		Sbagel = sbagel;
+	}
+
+	public static int getSscone()
+	{
+		return Sscone;
+	}
+
+	public static void setSscone(int sscone)
+	{
+		Sscone = sscone;
+	}
+
+	public static int getSmacaron()
+	{
+		return Smacaron;
+	}
+
+	public static void setSmacaron(int smacaron)
+	{
+		Smacaron = smacaron;
+	}
+
+	public static int getScookie()
+	{
+		return Scookie;
+	}
+
+	public static void setScookie(int scookie)
+	{
+		Scookie = scookie;
+	}
 
 }
