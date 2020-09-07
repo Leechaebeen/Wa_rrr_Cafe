@@ -1,4 +1,4 @@
-// 재고 속성 클래스(이채빈, 최호석)
+ // 재고 속성 클래스(이채빈, 최호석)
 class Inventory	
 {										
 	private static int bean; //원두
@@ -189,7 +189,7 @@ class Inventory
 
 
 	////////////////////////////////////////////////////////////////////////// 자동발주기준값
-	
+	/*
 	public void setBean(int bean)
 	{
 		Inventory.bean = bean;
@@ -377,6 +377,6 @@ class Inventory
 		Inventory.whipcream = whipcream;
 	}
 
-	
+	*/
 
 }

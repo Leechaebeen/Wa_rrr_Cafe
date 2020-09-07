@@ -1,13 +1,14 @@
 
 import java.util.Scanner;
 
-//발주 기능 클래스 (기능: 이채빈, 출력문: 최호석)
+//발주 기능 클래스 
 class Balju_Control
 {
 	int cha; // -- 실제로 발주한 수량을 담는 변수(자동발주 기준값 - 원래 있던 재고수 )
 	int all; // -- 누적을 위해 임시로 값을 담는 변수
 
 	// 다음날에도 유지될 재고 수량 담는 변수
+	/*
 	static int Nbean; // 원두
 	static int Nmilk; // 우유
 	static int Nchoco; // 초코시럽
@@ -28,10 +29,11 @@ class Balju_Control
 	static int Ncreamcheese; // 크림치즈
 	static int Nstroberryjam; // 딸기잼
 	static int Nwhipcream; // 휘핑크림
-
+	*/
+	
 	// 자동 발주값 설정 관리 메소드
 
-	static int standard = 5; // 자동발주수량 초기값 = 5
+	private static int standard = 5; // 자동발주수량 초기값 = 5
 
 	public void setGap()
 	{
@@ -48,96 +50,91 @@ class Balju_Control
 	// 전체 자동 발주 메소드
 	public void allAuto()
 	{
-		// test - 확인
-		// System.out.println(cha);
+		/*
+		// 1. 기존 코드 (멀리 돌아가는거였음) 
+		// 우유 자동 발주 
+		   cha = (inventory.getMilkL()-inventory.getMilk()); 
+		   all = inventory.getMilk() + cha;
+		   Nmilk += all; 
+			 Inventory.setNmilk(Nmilk);
+	
+		 // 2. 재고 12개 있고 발주기준값 30개인 경우 18개 추가하는 경우로 기획할 경우 
+		 cha = (inventory.getBeanL()-inventory.getBean()); // 진짜 채워지는 수량 = 발주기준 - 현재있는 수량 
+		 all = inventory.getBean()+cha; // 현재 원두 수량 = 원래 있던 원두 수량 + 진짜 채워지는 수량 
+	   	 Nbean = all;                   // 현재 원두 수량을 기준값으로 변경 Inventory.setNbean(Nbean);
+		*/
 
-		// 변경 코드(2020.09.01)
+		// 3.변경 코드
 		// ※ 자동발주 : 지정된 발주 수량만큼 전체 품목 발주
+	
 		// 원두 자동 발주
 		// 원두 수량 = 현재 원두 수량 + 발주기준값
 		Inventory.setNbean(Inventory.getNbean() + Balju_Control.standard);
-
-		/*
-		 * // 기존 코드 (돌아가는거였음) // 우유 자동 발주 cha =
-		 * (inventory.getMilkL()-inventory.getMilk()); all = inventory.getMilk() + cha;
-		 * Nmilk += all; Inventory.setNmilk(Nmilk);
-		 */
-
-		/*
-		 * // 재고 12개 있고 발주기준값 30개인 경우 18개 추가하는 경우 cha =
-		 * (inventory.getBeanL()-inventory.getBean()); // 발주기준 - 현재있는 수량 all =
-		 * inventory.getBean()+cha; // 현재 원두 수량 = 원래 있던 원두 수량 + 진짜 채워지는 수량 Nbean = all;
-		 * // 현재 원두 수량을 기준값으로 변경 Inventory.setNbean(Nbean);
-		 */
-
-		// test -- 확인
-		// System.out.println(cha);
-
+		
 		// 우유 자동 발주
-		Inventory.setNmilk(Inventory.getNmilk() + Balju_Control.standard);
+		Inventory.setNmilk(Inventory.getNmilk() + standard);
 
 		// 초코시럽 자동 발주
-		Inventory.setNchoco(Inventory.getNchoco() + Balju_Control.standard);
+		Inventory.setNchoco(Inventory.getNchoco() + standard);
 
 		// 바닐라시럽 자동 발주
-		Inventory.setNvanilla(Inventory.getNvanilla() + Balju_Control.standard);
+		Inventory.setNvanilla(Inventory.getNvanilla() + standard);
 
 		// 헤이즐넛시럽 자동 발주
-		Inventory.setNhazel(Inventory.getNhazel() + Balju_Control.standard);
+		Inventory.setNhazel(Inventory.getNhazel() + standard);
 
 		// 카라멜시럽 자동 발주
-		Inventory.setNcaramel(Inventory.getNcaramel() + Balju_Control.standard);
+		Inventory.setNcaramel(Inventory.getNcaramel() + standard);
 
 		// 자몽 자동 발주
-		Inventory.setNgrapefruit(Inventory.getNgrapefruit() + Balju_Control.standard);
+		Inventory.setNgrapefruit(Inventory.getNgrapefruit() + standard);
 
 		// 탄산수 자동 발주
-		Inventory.setNspawater(Inventory.getNspawater() + Balju_Control.standard);
+		Inventory.setNspawater(Inventory.getNspawater() + standard);
 
 		// 요거트파우더 자동 발주
-		Inventory.setNyogurtpowder(Inventory.getNyogurtpowder() + Balju_Control.standard);
+		Inventory.setNyogurtpowder(Inventory.getNyogurtpowder() + standard);
 
 		// 티백 자동 발주
-		Inventory.setNteabag(Inventory.getNteabag() + Balju_Control.standard);
+		Inventory.setNteabag(Inventory.getNteabag() + standard);
 
 		// 고구마 자동 발주
-		Inventory.setNgoguma(Inventory.getNgoguma() + Balju_Control.standard);
+		Inventory.setNgoguma(Inventory.getNgoguma() + standard);
 
 		// 오렌지 자동 발주
-		Inventory.setNorange(Inventory.getNorange() + Balju_Control.standard);
+		Inventory.setNorange(Inventory.getNorange() + standard);
 
 		// 케이크 자동 발주
-		Inventory.setNcake(Inventory.getNcake() + Balju_Control.standard);
+		Inventory.setNcake(Inventory.getNcake() + standard);
 
 		// 베이글 자동 발주
-		Inventory.setNbagel(Inventory.getNbagel() + Balju_Control.standard);
+		Inventory.setNbagel(Inventory.getNbagel() + standard);
 
 		// 스콘 자동 발주
-		Inventory.setNscone(Inventory.getNscone() + Balju_Control.standard);
+		Inventory.setNscone(Inventory.getNscone() + standard);
 
 		// 마카롱 자동 발주
-		Inventory.setNmacaron(Inventory.getNmacaron() + Balju_Control.standard);
+		Inventory.setNmacaron(Inventory.getNmacaron() + standard);
 
 		// 쿠키 자동 발주
-		Inventory.setNcookie(Inventory.getNcookie() + Balju_Control.standard);
+		Inventory.setNcookie(Inventory.getNcookie() + standard);
 
 		// 크림치즈 자동 발주
-		Inventory.setNcreamcheese(Inventory.getNcreamcheese() + Balju_Control.standard);
+		Inventory.setNcreamcheese(Inventory.getNcreamcheese() + standard);
 
 		// 딸기잼 자동 발주
-		Inventory.setNstroberryjam(Inventory.getNstroberryjam() + Balju_Control.standard);
+		Inventory.setNstroberryjam(Inventory.getNstroberryjam() + standard);
 
 		// 휘핑크림 자동 발주
-		Inventory.setNwhipcream(Inventory.getNwhipcream() + Balju_Control.standard);
+		Inventory.setNwhipcream(Inventory.getNwhipcream() + standard);
 
-		// 발주금액 연산 메소드
+		// 자동발주금액 연산 메소드
 		Money_Control money_control = new Money_Control();
-		money_control.money_Balju(Balju_Control.standard);
+		money_control.money_Balju(standard);
 
 		System.out.println("전체 품목을 자동 발주하였습니다.");
 		System.out.println();
 
-		// 최호석
 		System.out.println("===================================================================");
 		System.out.println("\t\t\t   【재 고 현 황】");
 		System.out.println("===================================================================");
@@ -167,10 +164,11 @@ class Balju_Control
 		System.out.println("===================================================================");
 		System.out.println();
 		
+		/*
 		// 자동발주금액 정산 메소드 호출(2020.09.02 추가)
 		Money_Control mc = new Money_Control();
 		mc.money_Balju(Balju_Control.standard);
-
+		*/
 	}
 
 	// 부분 자동 발주 메소드
@@ -180,7 +178,10 @@ class Balju_Control
 		boolean flag = true; // -- do while 문 반복 중단을 위한 변수
 
 		Scanner sc = new Scanner(System.in);
-
+		
+		// 발주 금액 인스턴스 추가
+		Balju_Price balju_price = new Balju_Price();
+				
 		do
 		{
 			System.out.println();
@@ -190,8 +191,12 @@ class Balju_Control
 			if (str.equals("우유"))
 			{
 				// 우유 발주
-				Inventory.setNmilk(Inventory.getNmilk() + Balju_Control.standard);
+				Inventory.setNmilk(Inventory.getNmilk() + standard);
 
+				// 발주금액 추가 
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getMilk(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 우유 재고 : " + Inventory.getNmilk());
@@ -201,8 +206,12 @@ class Balju_Control
 			if (str.equals("원두"))
 			{
 				// 원두 발주
-				Inventory.setNbean(Inventory.getNbean() + Balju_Control.standard);
-
+				Inventory.setNbean(Inventory.getNbean() + standard);
+				
+				// 발주금액 추가 
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getBean(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 원두 재고 : " + Inventory.getNbean());
@@ -212,8 +221,12 @@ class Balju_Control
 			if (str.equals("초코시럽"))
 			{
 				// 초코시럽 자동 발주
-				Inventory.setNchoco(Inventory.getNchoco() + Balju_Control.standard);
+				Inventory.setNchoco(Inventory.getNchoco() + standard);
 
+				// 발주금액 추가 
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getChoco(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 초코시럽 재고 : " + Inventory.getNchoco());
@@ -222,8 +235,12 @@ class Balju_Control
 			if (str.equals("바닐라시럽"))
 			{
 				// 바닐라시럽 자동 발주
-				Inventory.setNvanilla(Inventory.getNvanilla() + Balju_Control.standard);
-
+				Inventory.setNvanilla(Inventory.getNvanilla() + standard);
+				
+				// 발주금액 추가 
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getVanilla(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 바닐라시럽 재고 : " + Inventory.getNvanilla());
@@ -232,8 +249,12 @@ class Balju_Control
 			if (str.equals("헤이즐넛시럽"))
 			{
 				// 헤이즐넛시럽 자동 발주
-				Inventory.setNhazel(Inventory.getNhazel() + Balju_Control.standard);
-
+				Inventory.setNhazel(Inventory.getNhazel() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getHazel(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 헤이즐넛시럽 재고 : " + Inventory.getNhazel());
@@ -243,8 +264,12 @@ class Balju_Control
 			if (str.equals("카라멜시럽"))
 			{
 				// 카라멜시럽 자동 발주
-				Inventory.setNcaramel(Inventory.getNcaramel() + Balju_Control.standard);
-
+				Inventory.setNcaramel(Inventory.getNcaramel() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCaramel(), standard);
+			
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 카라멜시럽 재고 : " + Inventory.getNcaramel());
@@ -254,8 +279,12 @@ class Balju_Control
 			if (str.equals("자몽"))
 			{
 				// 자몽 자동 발주
-				Inventory.setNgrapefruit(Inventory.getNgrapefruit() + Balju_Control.standard);
+				Inventory.setNgrapefruit(Inventory.getNgrapefruit() + standard);
 
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getGrapefruit(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 자몽 재고 : " + Inventory.getNgrapefruit());
@@ -265,8 +294,12 @@ class Balju_Control
 			if (str.equals("탄산수"))
 			{
 				// 탄산수 자동 발주
-				Inventory.setNspawater(Inventory.getNspawater() + Balju_Control.standard);
-
+				Inventory.setNspawater(Inventory.getNspawater() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getSpawater(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 탄산수 재고 : " + Inventory.getNspawater());
@@ -276,8 +309,12 @@ class Balju_Control
 			if (str.equals("요거트파우더"))
 			{
 				// 요거트파우더 자동 발주
-				Inventory.setNyogurtpowder(Inventory.getNyogurtpowder() + Balju_Control.standard);
-
+				Inventory.setNyogurtpowder(Inventory.getNyogurtpowder() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getYogurtpowder(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 요거트파우더 재고 : " + Inventory.getNyogurtpowder());
@@ -287,8 +324,12 @@ class Balju_Control
 			if (str.equals("티백"))
 			{
 				// 티백 자동 발주
-				Inventory.setNteabag(Inventory.getNteabag() + Balju_Control.standard);
-
+				Inventory.setNteabag(Inventory.getNteabag() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getTeabag(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 티백 재고 : " + Inventory.getNteabag());
@@ -298,8 +339,12 @@ class Balju_Control
 			if (str.equals("고구마"))
 			{
 				// 고구마 자동 발주
-				Inventory.setNgoguma(Inventory.getNgoguma() + Balju_Control.standard);
+				Inventory.setNgoguma(Inventory.getNgoguma() + standard);
 
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getGoguma(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 고구마 재고 : " + Inventory.getNgoguma());
@@ -309,8 +354,12 @@ class Balju_Control
 			if (str.equals("오렌지"))
 			{
 				// 오렌지 자동 발주
-				Inventory.setNorange(Inventory.getNorange() + Balju_Control.standard);
-
+				Inventory.setNorange(Inventory.getNorange() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getOrange(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 오렌지 재고 : " + Inventory.getNorange());
@@ -320,8 +369,12 @@ class Balju_Control
 			if (str.equals("케이크"))
 			{
 				// 케이크 자동 발주
-				Inventory.setNcake(Inventory.getNcake() + Balju_Control.standard);
-
+				Inventory.setNcake(Inventory.getNcake() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCake(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 케이크 재고 : " + Inventory.getNcake());
@@ -331,8 +384,12 @@ class Balju_Control
 			if (str.equals("베이글"))
 			{
 				// 베이글 자동 발주
-				Inventory.setNbagel(Inventory.getNbagel() + Balju_Control.standard);
-
+				Inventory.setNbagel(Inventory.getNbagel() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getBagel(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 베이글 재고 : " + Inventory.getNbagel());
@@ -342,8 +399,12 @@ class Balju_Control
 			if (str.equals("스콘"))
 			{
 				// 스콘 자동 발주
-				Inventory.setNscone(Inventory.getNscone() + Balju_Control.standard);
-
+				Inventory.setNscone(Inventory.getNscone() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getScone(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 스콘 재고 : " + Inventory.getNscone());
@@ -353,8 +414,13 @@ class Balju_Control
 			if (str.equals("마카롱"))
 			{
 				// 마카롱 자동 발주
-				Inventory.setNmacaron(Inventory.getNmacaron() + Balju_Control.standard);
-
+				Inventory.setNmacaron(Inventory.getNmacaron() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getMacaron(), standard);
+				
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 마카롱 재고 : " + Inventory.getNmacaron());
@@ -364,8 +430,12 @@ class Balju_Control
 			if (str.equals("쿠키"))
 			{
 				// 쿠키 자동 발주
-				Inventory.setNcookie(Inventory.getNcookie() + Balju_Control.standard);
-
+				Inventory.setNcookie(Inventory.getNcookie() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCookie(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 쿠키 재고 : " + Inventory.getNcookie());
@@ -375,8 +445,12 @@ class Balju_Control
 			if (str.equals("크림치즈"))
 			{
 				// 크림치즈 자동 발주
-				Inventory.setNcreamcheese(Inventory.getNcreamcheese() + Balju_Control.standard);
-
+				Inventory.setNcreamcheese(Inventory.getNcreamcheese() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getCreamcheese(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 크림치즈 재고 : " + Inventory.getNcreamcheese());
@@ -386,8 +460,12 @@ class Balju_Control
 			if (str.equals("딸기잼"))
 			{
 				// 딸기잼 자동 발주
-				Inventory.setNstroberryjam(Inventory.getNstroberryjam() + Balju_Control.standard);
-
+				Inventory.setNstroberryjam(Inventory.getNstroberryjam() + standard);
+				
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getStroberryjam(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 딸기잼 재고 : " + Inventory.getNstroberryjam());
@@ -397,8 +475,12 @@ class Balju_Control
 			if (str.equals("휘핑크림"))
 			{
 				// 휘핑크림 자동 발주
-				Inventory.setNwhipcream(Inventory.getNwhipcream() + Balju_Control.standard);
-
+				Inventory.setNwhipcream(Inventory.getNwhipcream() + standard);
+					
+				//발주금액 추가
+				Money_Control money_control = new Money_Control();
+				money_control.money_Self_Balju(balju_price.getWhipcream(), standard);
+				
 				System.out.printf("%s 발주가 완료되었습니다.\n", str);
 				System.out.println();
 				System.out.println("현재 휘핑크림 재고 : " + Inventory.getNwhipcream());
@@ -412,12 +494,7 @@ class Balju_Control
 				flag = false;
 			}
 		} while (flag);
-
-		// 자동발주금액 정산 메소드 호출(2020.09.02 추가)
-		Money_Control mc = new Money_Control();
 		
-		mc.money_Balju(Balju_Control.standard);
-
 	}
 
 	// 수동 발주 메소드 - 품목 선택하고 관리자가 입력한 수량만큼 재고 증가
@@ -447,7 +524,7 @@ class Balju_Control
 				// 재고 추가
 				Inventory.setNmilk(Inventory.getNmilk() + su);
 				
-				// 발주금액 추가 2020.09.03 추가
+				// 발주금액 추가 
 				Money_Control money_control = new Money_Control();
 				money_control.money_Self_Balju(balju_price.getMilk(), su);
 				

@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-// 발주 메뉴 선택 클래스(이채빈)
+// 발주 메뉴 선택 클래스
 class Balju_Menus 
 {
 	private static int sel;            //-- 선택 값
