@@ -17,7 +17,7 @@ class Balju_Menus
 	{	
 	   	 System.out.println();
          System.out.println(" [발주 메뉴 선택]");
-         System.out.println(" 1.자동 발주값 설정");
+         System.out.println(" 1.자동 발주 수량 설정");
          System.out.println(" 2.전체 자동 발주 ");
          System.out.println(" 3.부분 자동 발주 ");
          System.out.println(" 4.수동 발주 ");
@@ -44,7 +44,7 @@ class Balju_Menus
 	 
    }
 
-   //선택된 메뉴 실행에 따른 기능 호출 메소드
+   //선택된 메뉴의 기능 호출 메소드
    public void menuRun(){
 
 	   Balju_Control balju_control = new Balju_Control();	// Balju 클래스 인스턴스 생성
@@ -53,7 +53,7 @@ class Balju_Menus
          
          case Balju_Menus.SETGAP: balju_control.setGap(); break;	//-- 자동 발주 기준값 설정하는 메소드 호출
          case Balju_Menus.ALL: balju_control.allAuto(); break;		//-- 자동 발주하는 메소드 호출
-         case Balju_Menus.SELECT: balju_control.auto(); break;		//-- 부분 발주하는 메소드 호출
+         case Balju_Menus.SELECT: balju_control.partialAuto(); break;		//-- 부분 발주하는 메소드 호출
          case Balju_Menus.SELF: balju_control.self(); break;		//-- 수동 발주하는 메소드 호출 
          case Balju_Menus.EXIT: balju_control.exit(); break;		//-- 관리자 메뉴로 나가는 메소드 호출
       }

@@ -1,9 +1,8 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Calendar;
 
-// 사용자 선택값을 자료구조에 담는 클래스(이채빈)
+// 사용자 선택값을 자료구조에 담는 클래스
 class Cafe_Menus
 {	
 	//ArrayList 자료구조 생성해서 Cafe_Select(속성 클래스) 타입의 객체를 저장할 것이다.
@@ -31,7 +30,8 @@ class Cafe_Menus
 	{
 		return sel;
 	}
-
+	
+	// Main.class 에서 사용
 	public int getSel2()
 	{
 		return sel2;
@@ -41,6 +41,7 @@ class Cafe_Menus
 	{
 		return category;
 	}
+	
 	
 	//전체 메뉴 출력 메소드
 	public void firPrint()

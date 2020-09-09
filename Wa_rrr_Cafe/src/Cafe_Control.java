@@ -13,7 +13,7 @@ class Cafe_Control
 	public int[] todaynum = {1,2,3,4,5,6,7}; //어떤 커피를 시켰는지 확인하기 위해 커피의 고유번호를 연결
 											//에스프레소 1번 아메리카노 2번...어느 클래스에서든 동일한 번호
    
-   // 랜덤 커피 할인 메소드(전진영)
+   // 랜덤 커피 할인 메소드
    public void today_coffee()
    {
       Sales s = new Sales();//판매량 클래스 인스턴스 생성
@@ -77,7 +77,7 @@ class Cafe_Control
 	// 자료구조 TreeSet 생성 (참조변수 so_out 은 Sold Out Menus 라는 뜻)
 	static TreeSet<String> so_menus = new TreeSet<String>();
 	
-	// sold out 연산 메소드(기능: 주한별, 내용: 이채빈)
+	// sold out 연산 메소드
 	void sold_out()
 	{
 		// 인벤토리의 bean 변수의 값이 0일때
@@ -325,7 +325,7 @@ class Cafe_Control
 	}// sold_out() 종료
 	
 	
-	// SOLD OUT 출력을 위한 메소드(주한별)
+	// SOLD OUT 출력을 위한 메소드
 	void so_print()	
 	{
 		Cafe_Control c = new Cafe_Control();

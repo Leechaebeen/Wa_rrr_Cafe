@@ -4,37 +4,9 @@ import java.util.Scanner;
 //발주 기능 클래스 
 class Balju_Control
 {
-	int cha; // -- 실제로 발주한 수량을 담는 변수(자동발주 기준값 - 원래 있던 재고수 )
-	int all; // -- 누적을 위해 임시로 값을 담는 변수
-
-	// 다음날에도 유지될 재고 수량 담는 변수
-	/*
-	static int Nbean; // 원두
-	static int Nmilk; // 우유
-	static int Nchoco; // 초코시럽
-	static int Nvanilla; // 바닐라시럽
-	static int Nhazel; // 헤이즐넛시럽
-	static int Ncaramel; // 카라멜시럽
-	static int Ngrapefruit; // 자몽
-	static int Nspawater; // 탄산수
-	static int Nyogurtpowder; // 요거트파우더
-	static int Nteabag; // 티백
-	static int Ngoguma; // 고구마
-	static int Norange; // 오렌지
-	static int Ncake; // 케이크
-	static int Nbagel; // 베이글
-	static int Nscone; // 스콘
-	static int Nmacaron; // 마카롱
-	static int Ncookie; // 쿠키
-	static int Ncreamcheese; // 크림치즈
-	static int Nstroberryjam; // 딸기잼
-	static int Nwhipcream; // 휘핑크림
-	*/
-	
-	// 자동 발주값 설정 관리 메소드
-
 	private static int standard = 5; // 자동발주수량 초기값 = 5
-
+	
+	// 자동 발주 수량 설정 관리 메소드
 	public void setGap()
 	{
 		Scanner sc = new Scanner(System.in);
@@ -172,7 +144,7 @@ class Balju_Control
 	}
 
 	// 부분 자동 발주 메소드
-	public void auto()
+	public void partialAuto()
 	{
 		String str; // -- 품목 입력받는 변수
 		boolean flag = true; // -- do while 문 반복 중단을 위한 변수
