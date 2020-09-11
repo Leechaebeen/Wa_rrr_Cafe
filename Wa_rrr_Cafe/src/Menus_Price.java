@@ -1,5 +1,5 @@
 
-// 사용자 메뉴 가격 담을 속성 클래스(이채빈) 
+// 사용자 메뉴 가격 담을 속성 클래스 
 class Menus_Price 
 {
 	//속성 : 메뉴별 가격 - 변하지 않으므로 final로
@@ -40,8 +40,8 @@ class Menus_Price
 	private final int Pstroberryjam = 500;
 	
 
-	// 게터 완성 
-  // 커피류 
+	// getter 
+	// 커피류 
 	public int getPespresso() {
 		return Pespresso;
 	}
