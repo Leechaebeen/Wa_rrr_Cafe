@@ -1,13 +1,12 @@
 import java.util.Iterator;
-
 import java.util.Scanner;
 
-// 결제금액 연산 위한 클래스(이채빈,전진영,주한별,최호석) 
+// 결제금액 연산 위한 클래스
 class Pay_Control
 {	
 
-	private static int totalPay;	//-- 잔수 별로 결제 금액 담을 속성
-	private int gap=0;	// 잔수별 금액을 누적하기 위한 변수 
+	private static int totalPay;	//-- 한 잔 단위로 결제 금액 담을 속성
+	private int gap = 0;			//-- 한 잔 단위 금액을 누적하기 위한 변수 
 	public static int allPay;		//-- 총 결제 금액  
 	
 	private static int mainPay;		//-- 메인 메뉴 금액
@@ -28,9 +27,7 @@ class Pay_Control
 	// 스탬프 인스턴스 생성.
 	Stamp stamp = new Stamp();
 	
-	////////////////////////////////////////////////////////////////////////////////////
-
-	
+	// getter/ setter 구성
 	public void setTotalPay(int totalPay)
 	{
 		Pay_Control.totalPay = (mainPay+hiopPay+opPay);
@@ -82,30 +79,30 @@ class Pay_Control
 	}
 
 
-  // 사용자 선택 값에 따른 결제 금액 연산 메소드(이채빈)
+   // 사용자 선택 값에 따른 결제 금액 연산 메소드
    public void pay()
    {   
 
 	  //Cafe_Menus.cafe_select -- 사용자 선택값 담은 자료구조
       //Cafe_Menus.cafe_select.get(0); 이런 방식으로 static 자료구조 호출
-
-      Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
       
-      Menus_Price menus_price = new Menus_Price(); // 사용자 가격 담은 클래스 객체 생성
-      Pay_Control pay_control = new Pay_Control(); // TotalPay 담을 클래스 객체 생성 
-	  Cafe_Control cc = new Cafe_Control(); //오늘의 커피 메뉴를 선택했는지 알아보기 위해 객체 생성
-
+      Menus_Price menus_price = new Menus_Price(); 		// 사용자 가격 담은 클래스 객체 생성
+      Pay_Control pay_control = new Pay_Control(); 		// TotalPay 담을 클래스 객체 생성 
+	  Cafe_Control cafe_control = new Cafe_Control(); 	//오늘의 커피 메뉴를 선택했는지 알아보기 위해 객체 생성
+	  
+	  Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체들을 반환
+	  
       while(it.hasNext())   // 객체가 없을 때까지 반복       
       {	
-		 cc.today_coffee();
-         Object obj = it.next();   // <Cafe_Select> 타입 객체를 가져온다
+		 //cafe_control.today_coffee();	// 랜덤 커피할인 메뉴 선정 
+         Object obj = it.next();   		// <Cafe_Select> 타입 객체를 가져온다
          Cafe_Select cafe_select = (Cafe_Select)obj;
 
-         //cafe_select.getMain();   // 사용자 선택값에 따른 메뉴 가격 
-         //cafe_select.getHiop();   // 사용자 선택값에 따른 옵션 가격
-         //cafe_select.getOP();      // 사용자 선택값에 따른 추가 옵션 가격  
+         //cafe_select.getMain();   	// 사용자 선택값에 따른 메뉴 가격 
+         //cafe_select.getHiop();   	// 사용자 선택값에 따른 옵션 가격
+         //cafe_select.getOP();      	// 사용자 선택값에 따른 추가 옵션 가격  
       
-         //테스트 - 쌓인 만큼 불러지는거 확인함
+         //테스트 - 담긴 만큼 불러지는거 확인함
          //System.out.println(" 메뉴 값 " + cafe_select.getMain() + " HOT/ICE 옵션값 " + cafe_select.getHiop() + "추가 옵션 값 " +  cafe_select.getOp());
       
          //사용자 선택값에 따른 메뉴별 연산 메소드 selectPay() 호출 
@@ -114,37 +111,37 @@ class Pay_Control
          { 
 			  switch (cafe_select.getMain())      // 메뉴 선택 값 
 				{    
-				   // 랜덤 커피 할인을 위한 연산(전진영)
-				   case 1 : if(cc.todaynum[0]==cafe_select.getMain()) //todaynum은 커피의 고유번호 
-							pay_control.setMainPay(menus_price.getPespresso()-500); //todaynum[0] 번호와 사용자가 입력한 음료선택 번호가 일치하면
-					  else															//500원 할인
+				   // 랜덤 커피 할인을 위한 연산
+				   case 1 : if(cafe_control.todaynum[0]==cafe_select.getMain()) 	//todaynum은 커피의 고유번호 
+							pay_control.setMainPay(menus_price.getPespresso()-500); //todaynum[0] 번호와 사용자가 입력한 음료선택 번호가 일치하면 500원 할인
+					  else															
 						    pay_control.setMainPay(menus_price.getPespresso()); break;
 				
-				   case 2 : if(cc.todaynum[0]==cafe_select.getMain())
+				   case 2 : if(cafe_control.todaynum[0]==cafe_select.getMain())
 							pay_control.setMainPay(menus_price.getPamericano()-500);
 						else
 							pay_control.setMainPay(menus_price.getPamericano()); break;
 
-				   case 3 :if(cc.todaynum[0]==cafe_select.getMain())
+				   case 3 :if(cafe_control.todaynum[0]==cafe_select.getMain())
 							 pay_control.setMainPay(menus_price.getPlatte()-500); 
 						else
 						 pay_control.setMainPay(menus_price.getPlatte()); break;
 
-				   case 4 :if(cc.todaynum[0]==cafe_select.getMain())
+				   case 4 :if(cafe_control.todaynum[0]==cafe_select.getMain())
 						 pay_control.setMainPay(menus_price.getPcafeMoca()-500); 
 						 else
 						 pay_control.setMainPay(menus_price.getPcafeMoca()); break;
 
-				   case 5 :if(cc.todaynum[0]==cafe_select.getMain()) 
+				   case 5 :if(cafe_control.todaynum[0]==cafe_select.getMain()) 
 							pay_control.setMainPay(menus_price.getPcappuccino()-500);
 						 else
 						 pay_control.setMainPay(menus_price.getPcappuccino()); break;
 
-				   case 6 :if(cc.todaynum[0]==cafe_select.getMain())  
+				   case 6 :if(cafe_control.todaynum[0]==cafe_select.getMain())  
 						 pay_control.setMainPay(menus_price.getPvanillaLatte()-500);
 						 else
 						 pay_control.setMainPay(menus_price.getPvanillaLatte()); break;
-				   case 7 :if(cc.todaynum[0]==cafe_select.getMain())               
+				   case 7 :if(cafe_control.todaynum[0]==cafe_select.getMain())               
 						  pay_control.setMainPay(menus_price.getPcaramelM()-500);
 						 else
 						 pay_control.setMainPay(menus_price.getPcaramelM()); break;
@@ -187,7 +184,6 @@ class Pay_Control
 
          }
 
-
          else if(cafe_select.getCategory() == 3)// 디저트 카테고리에서 
          {      
 			 pay_control.setHiopPay(0);	// HOT/ICE 옵션값 0으로 초기화 
@@ -209,23 +205,18 @@ class Pay_Control
             
             }
 
-            
          }
          
-         pay_control.setTotalPay(getTotalPay()); //-- 한잔 가격 담긴 상태
+         //-- getTotalPay() 는 한 잔의 메인 금액 + 옵션들 금액이다. 
+         pay_control.setTotalPay(getTotalPay()); 
          
+         //-- 한잔의 가격을 gap 에 담는다. 반복문이 돌면서 주문한 메뉴들의 값이 반복적으로 쌓인다.
          gap += getTotalPay();
-         
-         allPay = gap;	// 한 주문당 총 결제 금액   
-         
-         //테스트 
-         //System.out.println("메인 결제 금액: " + pay_control.getMainPay() + " ICE 추가 금액 : " +  pay_control.getHiopPay() + " 옵션 추가 금액 : " + pay_control.getOpPay()); 
-
-         //System.out.println("잔당 결제 금액: " + pay_control.getTotalPay()); // --> 각 잔별로 나온다 
-         //System.out.println("총 결제 금액: " + allPay);//임시 위치
 
       }// while 문 end
-
+      
+      allPay = gap;	// 한 영수증 당 총 결제 금액 
+      
    }
 
 	// 카드 매출을 모으는 static 변수
@@ -234,7 +225,7 @@ class Pay_Control
 	// Pay_Select 클래스의 메소드 호출
 	Pay_Select pc = new Pay_Select();
 
-	// 카드결제 메소드 (주한별)
+	// 카드결제 메소드 
 	public void cardPay()
 	{
 		// 스캐너 인스턴스 생성
@@ -259,11 +250,8 @@ class Pay_Control
 			System.out.println(" 카드 결제가 완료되었습니다.");
 			System.out.println();
 			
-			
-			
 			// 다음 진행 메소드인 Stamp 클래스의 saveSelect() 메소드 호출
 			stamp.saveSelect();
-			
 			
 			// costomer 수 1 증가
 			// 변수 costomerP는 결제를 완료한 후, 1이 더해진 새로운 costomer 수다.
@@ -279,12 +267,9 @@ class Pay_Control
 			pc.menuDisp();
 		}
 		
-
-	
-
 	}
    
-	// int반환형의 사용자 현금 입력 메소드(최호석) 
+	// int반환형의 사용자 현금 입력 메소드
 	public int inputBill() 
 	{
 		// 사용자의 현금 입력 메소드여서 이곳에서 일별 매출액이 쌓이면 안된다. 
@@ -347,7 +332,7 @@ class Pay_Control
 
 
 
-	 // boolean 반환형의 지폐반환여부 확인 메소드(거스름돈이 있는지 없는지)(최호석)
+	 // boolean 반환형의 지폐반환여부 확인 메소드(거스름돈이 있는지 없는지)
 	 public boolean checkbillPay(int user_money)    
 	 { 
 		 for (int i = 0; i < coinName.length; i++)	// 0부터 지폐이름의 배열크기(5)만큼 돈다. 총 6번 돈다.
@@ -373,9 +358,7 @@ class Pay_Control
 	 }
 	   
 
-
-
-	//현금 결제 메소드 (최호석)
+	//현금 결제 메소드 
 	 public void billPay(int user_money)			// 실제 잔돈 반환 메소드(위에 지폐반환여부 확인 메소드와 연동되게끔 해놓았다.
 	 {												// 자세한 사항은 Pay_Select 74~92번째줄 참고.
 		 
@@ -421,23 +404,16 @@ class Pay_Control
 		  // 스탬프 선택창으로 가는 메소드 호출.
 		  stamp.saveSelect();					
 		  
-		  // 20-03-14 01:50 이클립스 돌려보니 스탬프 선택창으로 가는 메소드 호출뒤 다시 돌아오는 문제 확인.
-		  // 504~510번째의 있는 customer 수 증가 메소드가 스탬프 선택창으로 가는 메소드 호출 앞에 있어서 스탬프 선택창이
-		  // billPay 메소드로 다시 돌아온 뒤
-		  // 블럭 밖으로 빠져 나가면서 null값을 반환하는 익셉션 오류가 발생하여 498과 504~510번째의 두 메소드 자리를 바꾸니 오류없이 작동됨.
-
 	 }
 
-			// 최호석 20-03-14 03:31 billPay메소드 주석달기 종료. 연동되는 Pay_Select도 74~83번째줄 주석 달기 시작.
-	
 	// 스탬프결제 메소드(스탬프 클래스 연동)
 	// 스탬프 결제 → 음료를 결제할 시 스탬프 10 차감, 3000원 할인
 	// 휴대폰번호로 스탬프 자료구조에 접근해야한다.
 	
-	// 스탬프 결제 메소드(주한별)
+	// 스탬프 결제 메소드
 	public void stampPay()	
 	{
-		Stamp.hashMap.put("01030026023",10);	// Test 로 넣은 채빈이 번호
+		Stamp.hashMap.put("01030026023",10);	// Test 로 넣은 번호
 		
 		// 스캐너 인스턴스 생성
 		Scanner sc = new Scanner(System.in);

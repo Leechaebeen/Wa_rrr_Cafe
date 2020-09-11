@@ -64,7 +64,7 @@ class Cafe_Menus
 		System.out.println("                            Wa_rrr CAFE                            ");
 		System.out.println("-------------------------------------------------------------------");
 		System.out.printf("%61d-%d-%d\n",year,month,date +TestCalendar.datePlus);// 오늘 날짜 출력 메소드
-		cafe_control.today_coffee();		// 랜덤 커피 할인 메뉴 연산 메소드
+		cafe_control.today_coffee();		// 랜덤 커피 할인 메뉴 선정 메소드
 		cafe_control.today_coffee_print();	// 랜덤 커피 메뉴 출력 메소드
 		System.out.println("-------------------------------------------------------------------");
 		System.out.println("                               메뉴 선택	                       ");
