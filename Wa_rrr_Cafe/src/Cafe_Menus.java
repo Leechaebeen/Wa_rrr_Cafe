@@ -190,7 +190,7 @@ class Cafe_Menus
 	}
 
 	// 3. Dessert 카테고리 출력 메소드
-	public void dessert()
+	public void dessertPrint()
 	{	
 		
 
@@ -274,22 +274,28 @@ class Cafe_Menus
 	  check = true;  //-- 카테고리 선택값 검사
 
     do{
-			if(sel<1||sel>9999)
-			{
-				System.out.println(" 1~3중에 선택해주세요.");
-				firPrint();
-			}
-			else
-			{			
-				check = false;
-			}
+    	
+    	if(sel==PASSWORD)
+		{
+				menuRun();
+		}
+		if(sel<1||sel>4)
+		{
+			System.out.println(" 1~3중에 선택해주세요.");
+			firPrint();
+		}
+		else
+		{			
+			check = false;
+		}
+		
       }while(check);
 
 	menuRun();
 
    } //menuSelect() end
 
-   //선택된 메뉴 실행에 따른 기능 호출 메소드
+   //선택된 메뉴의 기능 호출 메소드
    public void menuRun(){
 
 	   Cafe_Menus cafe_menus = new Cafe_Menus();	// Cafe_Menus 클래스 인스턴스 생성
@@ -308,38 +314,37 @@ class Cafe_Menus
 						
 									break;
 
-         case Cafe_Menus.DESSERT: cafe_menus.dessert();		// 3. Dessert 카테고리 출력 메소드
+         case Cafe_Menus.DESSERT: cafe_menus.dessertPrint();		// 3. Dessert 카테고리 출력 메소드
 		 						  cafe_menus.dessertOp();	// 디저트 옵션 선택 메소드
 								  cafe_menus.go();			 // 1.장바구니 이동 2. 다른 메뉴 추가
 
 									break;
-		// 전진영
+		
 		 case Cafe_Menus.PASSWORD :   Scanner sc = new Scanner(System.in);
 									  // 9999 입력 후 비밀번호를 입력하면 관리자 모드로 접근
 									  System.out.print(" 관리자 비밀번호를 입력해주세요 :");
 									  String password=sc.next();
 									  System.out.println();
 											
-									Password_Control pc = new Password_Control();
-									Cafe_Menus c = new Cafe_Menus();
-									ManagerMenu m = new ManagerMenu();
+									Password_Control password_control = new Password_Control();
+									ManagerMenu managerMenu = new ManagerMenu();
 
 									// password가 Password_Control에 등록된 password와 같으면 관리자모드 진입
-									if(password.equals(pc.getPassword()))	
+									if(password.equals(password_control.getPassword()))	
 									{
 										  
 										 while (true)
 										 {
-											 m.menuDisp();
-											 m.menuSelect();
-											 m.menuRun();
+											 managerMenu.menuDisp();
+											 managerMenu.menuSelect();
+											 managerMenu.menuRun();
 										 }
 									}
 									//비밀번호 잘못 입력하면 메인 메뉴로
 									else
 									{
 										System.out.println(" 비밀번호를 잘못 입력하셨습니다.");
-								          c.firPrint();
+										cafe_menus.firPrint();
 									}
 	
 									break;
@@ -348,7 +353,7 @@ class Cafe_Menus
 	
 	 }
 
-	// 1. 장바구니 가기 2. 다른 메뉴 추가 선택하도록 하는 메소드 
+	// 1. 장바구니 가기 2. 다른 메뉴 추가 선택 결과에 따라 기능 호출 하는 메소드 
 	public void menuGo()
 		{
 			Cafe_Menus cafe_menus = new Cafe_Menus();	// Cafe_Menus 클래스 인스턴스 생성
