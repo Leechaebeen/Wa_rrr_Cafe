@@ -7,6 +7,8 @@ class Pay_Control
 
 	private static int totalPay;	//-- 한 잔 단위로 결제 금액 담을 속성
 	private int gap = 0;			//-- 한 잔 단위 금액을 누적하기 위한 변수 
+									//-- 영수증 단위로 연산할 때마다 초기화 되어야하기 때문에 static 속성이면 안된다.  
+	
 	public static int allPay;		//-- 총 결제 금액  
 	
 	private static int mainPay;		//-- 메인 메뉴 금액
@@ -94,7 +96,6 @@ class Pay_Control
 	  
       while(it.hasNext())   // 객체가 없을 때까지 반복       
       {	
-		 //cafe_control.today_coffee();	// 랜덤 커피할인 메뉴 선정 
          Object obj = it.next();   		// <Cafe_Select> 타입 객체를 가져온다
          Cafe_Select cafe_select = (Cafe_Select)obj;
 
@@ -102,11 +103,8 @@ class Pay_Control
          //cafe_select.getHiop();   	// 사용자 선택값에 따른 옵션 가격
          //cafe_select.getOP();      	// 사용자 선택값에 따른 추가 옵션 가격  
       
-         //테스트 - 담긴 만큼 불러지는거 확인함
-         //System.out.println(" 메뉴 값 " + cafe_select.getMain() + " HOT/ICE 옵션값 " + cafe_select.getHiop() + "추가 옵션 값 " +  cafe_select.getOp());
       
-         //사용자 선택값에 따른 메뉴별 연산 메소드 selectPay() 호출 
-            
+         //사용자 선택값에 따른 메뉴별 연산 
          if (cafe_select.getCategory() == 1)	 // 카테고리 선택값이 커피  
          { 
 			  switch (cafe_select.getMain())      // 메뉴 선택 값 
