@@ -27,10 +27,10 @@ class TestCalendar //시연을 위해 날짜가 바뀌고 바꼈을 때 기능들을 보여주기 위한 
 			rec.setCustomer(0); //하루 손님 수 초기화 
 			money.setCard_SalesD(0); //일별 카드값 초기화
 			money.setBill_SalesD(0); //일별 현금값 초기화
-			money.setBalju_moneyD(0); //일별 발주 금액 초기화
+			Money.setBalju_moneyD(0); //일별 발주 금액 초기화
 
-			// 총 판매량 누적시키는 메소드  
-			sc.saveSales();
+			//일자 별로 총 판매량 누적시키는 메소드  
+			//sc.saveSales();
 			resetSales();// 일별 판매량 초기화
 			//resetChange();//거스름돈 초기화
 
@@ -40,7 +40,7 @@ class TestCalendar //시연을 위해 날짜가 바뀌고 바꼈을 때 기능들을 보여주기 위한 
 
 	}
 
-	//날짜가 바뀌면 모든 메뉴 판매량 초기화
+	//날짜가 바뀌면 모든 메뉴 일별 판매량 초기화
 	void resetSales()
 	{
 		  // Sales 판매량 클래스 

@@ -1,4 +1,4 @@
-// 메뉴별 판매량 속성 클래스(이채빈) 
+// 메뉴별 판매량 속성 클래스 
 class Sales 
 {
 
@@ -27,33 +27,34 @@ class Sales
    private static int Scookie;
 
 	 
-	// 각 메뉴 총 판매량 누적(주한별)
-	 // ① 커피류
-	public static int saveEspresso;
-	public static int saveAmericano;
-	public static int saveLatte;
-	public static int saveCafeMoca;
-	public static int saveCappuccino;
-	public static int saveVanillaLatte;
-	public static int saveCaramelM;
+	// 각 메뉴 총 판매량 누적
+	// ① 커피류
+	private static int saveEspresso;
+	
+
+	private static int saveAmericano;
+	private static int saveLatte;
+	private static int saveCafeMoca;
+	private static int saveCappuccino;
+	private static int saveVanillaLatte;
+	private static int saveCaramelM;
 
 	// ② 논커피류
-	public static int saveJamongAde;
-	public static int saveYogurt;
-	public static int saveTea;
-	public static int saveOrangeJuice;
-	public static int saveGogumaLatte;
+	private static int saveJamongAde;
+	private static int saveYogurt;
+	private static int saveTea;
+	private static int saveOrangeJuice;
+	private static int saveGogumaLatte;
 
-	 // ③ 디저트류 
-	public static int saveCake;
-	public static int saveBagel;
-	public static int saveScone;
-	public static int saveMacaron;
-	public static int saveCookie;
+	// ③ 디저트류 
+	private static int saveCake;
+	private static int saveBagel;
+	private static int saveScone;
+	private static int saveMacaron;
+	private static int saveCookie;
 
 
-   //게터세터 
-
+    // 일별 판매량 getter/setter
 	public static int getSespresso()
 	{
 		return Sespresso;
@@ -222,6 +223,177 @@ class Sales
 	public static void setScookie(int scookie)
 	{
 		Scookie = scookie;
+	}
+	
+	// 총 판매량 getter/setter
+	public static int getSaveEspresso()
+	{
+		return saveEspresso;
+	}
+
+	public static void setSaveEspresso(int saveEspresso)
+	{
+		Sales.saveEspresso = saveEspresso;
+	}
+
+	public static int getSaveAmericano()
+	{
+		return saveAmericano;
+	}
+
+	public static void setSaveAmericano(int saveAmericano)
+	{
+		Sales.saveAmericano = saveAmericano;
+	}
+
+	public static int getSaveLatte()
+	{
+		return saveLatte;
+	}
+
+	public static void setSaveLatte(int saveLatte)
+	{
+		Sales.saveLatte = saveLatte;
+	}
+
+	public static int getSaveCafeMoca()
+	{
+		return saveCafeMoca;
+	}
+
+	public static void setSaveCafeMoca(int saveCafeMoca)
+	{
+		Sales.saveCafeMoca = saveCafeMoca;
+	}
+
+	public static int getSaveCappuccino()
+	{
+		return saveCappuccino;
+	}
+
+	public static void setSaveCappuccino(int saveCappuccino)
+	{
+		Sales.saveCappuccino = saveCappuccino;
+	}
+
+	public static int getSaveVanillaLatte()
+	{
+		return saveVanillaLatte;
+	}
+
+	public static void setSaveVanillaLatte(int saveVanillaLatte)
+	{
+		Sales.saveVanillaLatte = saveVanillaLatte;
+	}
+
+	public static int getSaveCaramelM()
+	{
+		return saveCaramelM;
+	}
+
+	public static void setSaveCaramelM(int saveCaramelM)
+	{
+		Sales.saveCaramelM = saveCaramelM;
+	}
+
+	public static int getSaveJamongAde()
+	{
+		return saveJamongAde;
+	}
+
+	public static void setSaveJamongAde(int saveJamongAde)
+	{
+		Sales.saveJamongAde = saveJamongAde;
+	}
+
+	public static int getSaveYogurt()
+	{
+		return saveYogurt;
+	}
+
+	public static void setSaveYogurt(int saveYogurt)
+	{
+		Sales.saveYogurt = saveYogurt;
+	}
+
+	public static int getSaveTea()
+	{
+		return saveTea;
+	}
+
+	public static void setSaveTea(int saveTea)
+	{
+		Sales.saveTea = saveTea;
+	}
+
+	public static int getSaveOrangeJuice()
+	{
+		return saveOrangeJuice;
+	}
+
+	public static void setSaveOrangeJuice(int saveOrangeJuice)
+	{
+		Sales.saveOrangeJuice = saveOrangeJuice;
+	}
+
+	public static int getSaveGogumaLatte()
+	{
+		return saveGogumaLatte;
+	}
+
+	public static void setSaveGogumaLatte(int saveGogumaLatte)
+	{
+		Sales.saveGogumaLatte = saveGogumaLatte;
+	}
+
+	public static int getSaveCake()
+	{
+		return saveCake;
+	}
+
+	public static void setSaveCake(int saveCake)
+	{
+		Sales.saveCake = saveCake;
+	}
+
+	public static int getSaveBagel()
+	{
+		return saveBagel;
+	}
+
+	public static void setSaveBagel(int saveBagel)
+	{
+		Sales.saveBagel = saveBagel;
+	}
+
+	public static int getSaveScone()
+	{
+		return saveScone;
+	}
+
+	public static void setSaveScone(int saveScone)
+	{
+		Sales.saveScone = saveScone;
+	}
+
+	public static int getSaveMacaron()
+	{
+		return saveMacaron;
+	}
+
+	public static void setSaveMacaron(int saveMacaron)
+	{
+		Sales.saveMacaron = saveMacaron;
+	}
+
+	public static int getSaveCookie()
+	{
+		return saveCookie;
+	}
+
+	public static void setSaveCookie(int saveCookie)
+	{
+		Sales.saveCookie = saveCookie;
 	}
 
 }

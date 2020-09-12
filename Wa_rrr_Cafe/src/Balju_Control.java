@@ -138,8 +138,8 @@ class Balju_Control
 		
 		/*
 		// 자동발주금액 정산 메소드 호출(2020.09.02 추가)
-		Money_Control mc = new Money_Control();
-		mc.money_Balju(Balju_Control.standard);
+		Money_Control money_control = new Money_Control();
+		money_control.money_Balju(Balju_Control.standard);
 		*/
 	}
 

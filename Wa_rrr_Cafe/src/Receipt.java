@@ -1,5 +1,3 @@
-
-
 import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
@@ -131,11 +129,6 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 						System.out.println();
 						print();
 					}
-				
-				
-				
-				 
-
 				}
 
 		}
@@ -395,16 +388,19 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 		
 		//////////위치 확정///////////
 		I_minus i_minus = new I_minus();
-		Inven_Control inven_control = new Inven_Control();
+		//Inven_Control inven_control = new Inven_Control();
 		Sales_Control sales_control = new Sales_Control();
 
 		
 		 // 일별 판매량 누적시키는 메소드 - 영수증 별로  
-	      sales_control.sales_Cal();  
+	     sales_control.sales_Cal();  
+	     
+	     //총 판매량 누적시키는 메소드
+	     
 
 		 //  일별 판매량 초기화 
 		 TestCalendar tc =new TestCalendar();
-		// tc.resetSales();// 일별 판매량 초기화 - 여기 아님
+		 // tc.resetSales();// 일별 판매량 초기화 - 여기 아님
 		
 		
 		// 재고 마이너스 시키는 메소드
