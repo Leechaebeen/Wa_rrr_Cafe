@@ -2,7 +2,7 @@ import java.util.Iterator;
 import java.util.Random;
 import java.util.Scanner;
 
-// 영수증 출력 클래스(이채빈, 주한별)
+// 영수증 출력 클래스
 class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 {
 	// 방문한 손님 수 → 손님이 결제할 때마다 1씩 증가하는 값을 담는 변수
@@ -41,8 +41,6 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 	// ※ 완성된 메소드
 	void random()	// 랜덤 이벤트 기능 메소드
 	{
-
-		
 		// Test를 위해 첫 손님은 무조건 당첨되는 조건(getCostomer()==0)으로 설정
 		// 원래는... if(getCostomer()==dang)
 		if (getCustomer()==1)
@@ -141,8 +139,8 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 		
 	} // random() 끝
 	
-	// 영수증 출력 메소드(이채빈)
-	void print()
+	// 영수증 출력 메소드
+	public void print()
 	{
 		// 필요한 출력
 		// 오늘 날짜, 구매한 메인메뉴, 옵션, 잔수, 가격, 적립했을 경우 휴대폰번호		
@@ -156,38 +154,37 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 		// static costomer에 저장한다.
 		setCustomer(customerP);
 
-	 String menu = null;//menu 부를 때 쓸 변수
-	 String hiop=null ;//핫 아이스 부를 때 쓸 변수
-	 String option=null ; //옵션 부를 때 쓸 변수
+		String menu = null;//menu 부를 때 쓸 변수
+		String hiop=null ;//핫 아이스 부를 때 쓸 변수
+		String option=null ; //옵션 부를 때 쓸 변수
 
-	  System.out.println("===================================================================");
-	  System.out.printf(" \t                          00%d                       \n",getCustomer());
-	  System.out.println("-------------------------------------------------------------------");
-	  System.out.println("                                 영수증                            ");
-	  System.out.println("===================================================================");
-	  System.out.println("     음료 및 디저트     |        HOT/ICE         |      옵션      |");
-	  System.out.println("-------------------------------------------------------------------");
+		System.out.println("===================================================================");
+		System.out.printf(" \t                          00%d                       \n",getCustomer());
+		System.out.println("-------------------------------------------------------------------");
+		System.out.println("                                 영수증                            ");
+		System.out.println("===================================================================");
+		System.out.println("     음료 및 디저트     |        HOT/ICE         |      옵션      |");
+		System.out.println("-------------------------------------------------------------------");
 
-      Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
-      Cafe_Menus cafe_menus = new Cafe_Menus();
+		Iterator<Cafe_Select> it = Cafe_Menus.cafe_select.iterator(); //    cafe_select 에 저장되어있는 <Cafe_Select> 타입 객체  
 
-      Pay_Control pay_control = new Pay_Control();
-      pay_control.pay();
+		// 결제금액연산 메소드
+		Pay_Control pay_control = new Pay_Control();
+		pay_control.pay();
 	 
+		Scanner sc = new Scanner(System.in);
+
+		while(it.hasNext())   // 객체가 없을 때까지 반복    it.hasNext()      
+		{
+			Object obj = it.next();   // <Cafe_Select> 타입 객체를 가져온다
+			Cafe_Select cafe_select = (Cafe_Select)obj;
+
+			//cafe_select.getMain();   // 장바구니에 담긴 메뉴 값 
+			//cafe_select.getHiop();   // 장바구니에 담긴 HOT/ICE 옵션 값
+			//cafe_select.getOP();   // 장바구니에 담긴 추가 옵션 값 
+
       
-      Scanner sc = new Scanner(System.in);
-
-      while(it.hasNext())   // 객체가 없을 때까지 반복    it.hasNext()      
-      {
-         Object obj = it.next();   // <Cafe_Select> 타입 객체를 가져온다
-         Cafe_Select cafe_select = (Cafe_Select)obj;
-
-         //cafe_select.getMain();   // 장바구니에 담긴 메뉴 값 
-         //cafe_select.getHiop();   // 장바구니에 담긴 HOT/ICE 옵션 값
-         //cafe_select.getOP();   // 장바구니에 담긴 추가 옵션 값 
-
-      
-         if(cafe_select.getCategory() == 1) //카테고리값이 1이라면...커피
+			if(cafe_select.getCategory() == 1) //카테고리값이 1이라면...커피
             {
 	
                switch(cafe_select.getMain()) 
@@ -234,7 +231,6 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
                }
 
             }
-
             else if(cafe_select.getCategory() == 2) //2번 논커피
             {
 				cafe_select.setHiop(0);//테스트
@@ -267,41 +263,29 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 					
                }
 
-			 
-
-			    switch(cafe_select.getOp())
+			   switch(cafe_select.getOp())
                {
-				 
                   case 0 : option ="                |";break;
-                  
                }
                
             }
-
             else if(cafe_select.getCategory() == 3)//3번 디저트
             {
 				cafe_select.setHiop(0); //테스트
-               switch(cafe_select.getMain())
-               {
-                  
-                  case 1 : menu ="     케이크             |" ; break;
-                        
+				switch(cafe_select.getMain())
+				{
+                   case 1 : menu ="     케이크             |" ; break;
                    case 2 : menu ="     베이글             |"; break;
-                                
                    case 3 : menu ="     스콘               |"; break;
-                                   
                    case 4 : menu ="     마카롱             |"; break;
-                              
                    case 5 : menu ="     쿠키               |"; break;
-                        
                }
 
-			    switch(cafe_select.getHiop())
+			   switch(cafe_select.getHiop())
                {
                   case 0 : hiop = "                        |";	break;
 					
                }
-               
                   
                switch(cafe_select.getOp())
                {
@@ -327,13 +311,10 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 
          System.out.printf("%s%s%s%n",menu,hiop,option); 
        
-	   // 테스트를 위해 넣어본 구문 - 있어야 함 
-		
-         
       }//while문 end 
 		     
-		 System.out.println("-------------------------------------------------------------------");
-	     System.out.printf (" 결제 금액 : %d원                      \n", Pay_Control.allPay);
+		System.out.println("-------------------------------------------------------------------");
+	    System.out.printf (" 결제 금액 : %d원                      \n", Pay_Control.allPay);
 	     
 
 		// 이벤트 당첨 여부(flagDang 변수에 따른 if문 구성)
@@ -350,6 +331,7 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 			System.out.println("스탬프 적립된 휴대폰 번호 : " + phone);
 			System.out.println("소유한 스탬프 개수 : "+hashMap.get(phone));
 		}
+		
 		// 테이크아웃 여부
 		if(Takeout.sel==2)
 		{	
@@ -367,7 +349,6 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 		
 		}
 		else
-
 		{	
 			System.out.println("--------------------------------------------------------------------");
 			System.out.println(" 매장 식사를 선택하셨습니다.                           ");
@@ -380,40 +361,24 @@ class Receipt extends Stamp	// Stamp 클래스를 상속받는다
 			System.out.println();
 			System.out.println();
 			System.out.println();
-
-		
 		}
 		
-		//적립했을 경우 휴대폰번호
-		
-		//////////위치 확정///////////
 		I_minus i_minus = new I_minus();
-		//Inven_Control inven_control = new Inven_Control();
 		Sales_Control sales_control = new Sales_Control();
 
-		
-		 // 일별 판매량 누적시키는 메소드 - 영수증 별로  
+		 // 판매량 누적시키는 메소드 - 영수증 별로  
 	     sales_control.sales_Cal();  
 	     
-	     //총 판매량 누적시키는 메소드
-	     
-
-		 //  일별 판매량 초기화 
-		 TestCalendar tc =new TestCalendar();
-		 // tc.resetSales();// 일별 판매량 초기화 - 여기 아님
-		
-		
-		// 재고 마이너스 시키는 메소드
-		i_minus.invenMinus();					// 여기 위치 확정@@ 건드리면 안된다  
-		//inven_control.totalInventory();		// 확인하기 위한 테스트 위치
-		
+		// 재고 마이너스 
+		i_minus.invenMinus();	  
 
 		// 결제 금액과 자료구조 초기화시키는 메소드
 		Pay_Control.allPay = 0; 
 		Cafe_Menus.cafe_select.clear();
 
-		// 손님 수 누적시키는 메소드(2명이 되면 날짜 바꾸고 0으로 초기화)
-		tc.calendar();
+		//캘린더 메소드(시연은 위한 설정값, 날짜에 따른 초기화)
+		TestCalendar testCalendar = new TestCalendar();
+		testCalendar.calendar();
 
 		// 다시 처음의 메뉴로 돌아가기
 		Cafe_Menus start = new Cafe_Menus();
