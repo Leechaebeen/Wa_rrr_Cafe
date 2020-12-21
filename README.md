@@ -1,3 +1,3 @@
 # Wa_rrr_Cafe
-console-based Java program / Team Project
+콘솔 기반 카페 키오스크 프로그램 / 팀 프로젝트
 
